@@ -1,0 +1,857 @@
+:root {
+  --primary-color: #0270F6;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  height: inherit;
+  font-family: 'Roboto Regular';
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.max-width-full {
+  max-width: 100%;
+}
+
+.padding-zero {
+  padding: 0;
+}
+
+.padding-top-zero {
+  padding-top: 0;
+}
+
+.padding-right-zero {
+  padding-right: 0;
+}
+
+.padding-bottom-zero {
+  padding-bottom: 0;
+}
+
+.padding-left-zero {
+  padding-left: 0;
+}
+
+.margin-zero {
+  margin: 0;
+}
+
+.margin-top-zero {
+  margin-top: 0;
+}
+
+.margin-right-zero {
+  margin-right: 0;
+}
+
+.margin-bottom-zero {
+  margin-bottom: 0;
+}
+
+.margin-left-zero {
+  margin-left: 0;
+}
+
+.left {
+  float: left;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.right {
+  float: right;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.flex-one {
+  flex: 1;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-align-self-center {
+  align-self: center;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-justify-content-end {
+  justify-content: flex-end;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.flexbox-parent {
+  width: 100%;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: flex-start; /* align items in Main Axis */
+  align-items: stretch; /* align items in Cross Axis */
+  align-content: stretch; /* Extra space in Cross Axis */  
+}
+
+.flexbox-item-grow {
+  flex-grow: 1; /* same as flex: 1 1 auto; */
+}
+
+.fill-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; /* align items in Main Axis */
+  align-items: stretch; /* align items in Cross Axis */
+  align-content: stretch; /* Extra space in Cross Axis */
+}
+.fill-area-content {
+  /* Needed for when the area gets squished too far and there is content that can't be displayed */
+  overflow: auto; 
+}
+
+.bottom-edge-shadow {
+  -webkit-box-shadow: 0 2px 2px -2px #ccc;
+  -moz-box-shadow: 0 2px 2px -2px #ccc;
+  -ms-box-shadow: 0 2px 2px -2px #ccc;
+  -o-box-shadow: 0 2px 2px -2px #ccc;
+  box-shadow: 0 2px 2px -2px #ccc;
+}
+
+.top-edge-shadow {
+  -webkit-box-shadow: 0px 0px 10px #ccc;
+  -moz-box-shadow: 0px 0px 10px #ccc;
+  -ms-box-shadow: 0px 0px 10px #ccc;
+  -o-box-shadow: 0px 0px 10px #ccc;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+#header {
+  background: var(--primary-color);
+  height: 64px;
+  flex: 0 0 auto;
+  width: 100%;
+  z-index: 2;
+  -webkit-box-shadow: 0 1px 4px 1px rgba(140,140,140,0.5);
+  -moz-box-shadow: 0 1px 4px 1px rgba(140,140,140,0.5);
+  -ms-box-shadow: 0 1px 4px 1px rgba(140,140,140,0.5);
+  -o-box-shadow: 0 1px 4px 1px rgba(140,140,140,0.5);
+  box-shadow: 0 1px 4px 1px rgba(140,140,140,0.5);
+}
+
+#header-subtitle-container {
+  display: flex;
+}
+
+#iconContainerStyle {
+  margin: 12px 16px;
+  width: 40px;
+}
+
+#iconContainerStyle img {
+  max-width: 100%;
+}
+
+#root, #chatbot-ui-container, #bodyWrapper {
+  height: inherit;
+}
+
+.boxWrapper {
+  position: relative;
+}
+
+.boxShadow {
+  position:relative;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(150, 150, 150, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(150, 150, 150, 0.1) inset;
+  -ms-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(150, 150, 150, 0.1) inset;
+  -o-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(150, 150, 150, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(150, 150, 150, 0.1) inset;
+}
+
+.boxShadow:after {
+  content:"";
+  position:absolute;
+  z-index:-1;
+
+  -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+  -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+  -ms-box-shadow:0 0 20px rgba(0,0,0,0.8);
+  -o-box-shadow:0 0 20px rgba(0,0,0,0.8);
+  box-shadow:0 0 20px rgba(0,0,0,0.8);
+
+  top:50%;
+  bottom:0;
+  left:10px;
+  right:10px;
+
+  -webkit-border-radius:100px / 10px;
+  -moz-border-radius:100px / 10px;
+  -ms-border-radius:100px / 10px;
+  -o-border-radius:100px / 10px;
+  border-radius:100px / 10px;
+
+  right:10px;
+  left:auto;
+
+  -webkit-transform:skew(8deg) rotate(3deg);
+  -moz-transform:skew(8deg) rotate(3deg);
+  -ms-transform:skew(8deg) rotate(3deg);
+  -o-transform:skew(8deg) rotate(3deg);
+  transform:skew(8deg) rotate(3deg);
+}
+
+.height-inherit {
+  height: inherit;
+}
+
+.chat-bubble {
+  max-width: 85%;
+  color: #000;
+  clear: both;
+  line-height: 18px;
+  font-size: 15px;
+  padding: 8px;
+  position: relative;
+  font-family: 'Roboto Regular';
+  word-wrap: break-word;
+
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  -ms-border-radius:4px;
+  -o-border-radius:4px;
+  border-radius:4px;
+
+  margin-bottom:4px;
+  word-break: break-word;
+}
+
+.chat-bubble-left {
+  background: #f6f9fa;
+  float: left;
+  color: #4F5D64;
+
+  -webkit-border-top-left-radius:0;
+  -moz-border-top-left-radius:0;
+  -ms-border-top-left-radius:0;
+  -o-border-top-left-radius:0;
+  border-top-left-radius:0;
+  
+}
+
+.errorIconContainer {
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 8px;
+}
+
+.chat-bubble-left:not(.typing) {
+  padding-right: 16px;
+}
+
+.chat-bubble-right {
+  background: var(--primary-color);
+  color: #FFFFFF;
+  text-align: right;
+  float: right;
+
+  -webkit-border-top-right-radius:0;
+  -moz-border-top-right-radius:0;
+  -ms-border-top-right-radius:0;
+  -o-border-top-right-radius:0;
+  border-top-right-radius:0;
+}
+
+.chat-bubble-right:not(.typing) {
+  padding-left: 16px;
+}
+
+#react-chatbot-ui-messages-container {
+  padding: 16px;
+  flex: 1 1 auto;
+  position: relative;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+#footer {
+  height: 64px;
+  margin-top: 12px;
+  z-index: 2;
+}
+
+#footer-file-upload-button{
+  flex: 0 0 auto;
+  align-items: center;
+  display: flex;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  height: 56px;
+}
+
+#footer-input-wrapper {
+  flex: 0 0 auto;
+  box-shadow: 0 0 4px 0 #d4d4d4;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  
+  -webkit-border-radius:32px;
+  -moz-border-radius:32px;
+  -ms-border-radius:32px;
+  -o-border-radius:32px;
+  border-radius:32px;
+
+  align-items: center;
+  height: 56px;
+  padding: 8px;
+  display: flex;
+}
+
+.user-uploaded-image {
+  margin-bottom: 8px;
+}
+
+#footer-input-wrapper:focus-within {
+  -webkit-box-shadow: 0 0 4px 0 var(--primary-color);
+  -moz-box-shadow: 0 0 4px 0 var(--primary-color);
+  -ms-box-shadow: 0 0 4px 0 var(--primary-color);
+  -o-box-shadow: 0 0 4px 0 var(--primary-color);
+  box-shadow: 0 0 4px 0 var(--primary-color);
+}
+
+#footer-input #react-chatbot-ui-input {
+  height: 56px;
+  padding:8px;
+}
+
+.sender-name {
+  font-size: 12px;
+  font-family: 'Roboto Medium';
+  color:#283593;
+  margin-bottom: 0.2rem;
+}
+
+.timeString {
+  display: block;
+  font-size: 10px;
+  float: right;
+  line-height: 12px;
+  margin-top: 5px;
+}
+
+.typing-indicator {
+  will-change: transform;
+  width: auto;
+
+  -webkit-border-radius:50px;
+  -moz-border-radius:50px;
+  -ms-border-radius:50px;
+  -o-border-radius:50px;
+  border-radius:50px;
+
+  padding: 5px;
+  display: table;
+  margin: 0 auto;
+  position: relative;
+
+  -webkit-animation: 3s bulge infinite ease-out;
+  -moz-animation: 3s bulge infinite ease-out;
+  -ms-animation: 3s bulge infinite ease-out;
+  -o-animation: 3s bulge infinite ease-out;
+  animation: 3s bulge infinite ease-out;
+}
+
+.typing-indicator span {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 1px;
+  display: block;
+
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
+  border-radius:50%;
+
+  opacity: 0.4;
+}
+
+.typing-indicator.left span {
+  background-color: #454545;
+}
+
+.typing-indicator.right span {
+  background-color: #FEFEFE;
+}
+
+.typing-indicator span:nth-of-type(1) {
+  -webkit-animation: 1s blink infinite 0.33s;
+  -moz-animation: 1s blink infinite 0.33s;
+  -ms-animation: 1s blink infinite 0.33s;
+  -o-animation: 1s blink infinite 0.33s;
+  animation: 1s blink infinite 0.33s;
+}
+.typing-indicator span:nth-of-type(2) {
+  -webkit-animation: 1s blink infinite 0.66s;
+  -moz-animation: 1s blink infinite 0.66s;
+  -ms-animation: 1s blink infinite 0.66s;
+  -o-animation: 1s blink infinite 0.66s;
+  animation: 1s blink infinite 0.66s;
+}
+.typing-indicator span:nth-of-type(3) {
+  -webkit-animation: 1s blink infinite 0.99s;
+  -moz-animation: 1s blink infinite 0.99s;
+  -ms-animation: 1s blink infinite 0.99s;
+  -o-animation: 1s blink infinite 0.99s;
+  animation: 1s blink infinite 0.99s;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes bulge {
+  50% {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+@-moz-keyframes bulge {
+  50% {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+@-ms-keyframes bulge {
+  50% {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+@-o-keyframes bulge {
+  50% {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@keyframes bulge {
+  50% {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+.margin-top-12 {
+  margin-top: 12px;
+}
+
+.margin-bottom-16 {
+  margin-bottom: 16px;
+}
+
+#send-button-container {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  outline: none;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.edit-icon {
+  cursor: pointer;
+}
+
+.edit-icon:hover {
+  opacity: 0.7;
+}
+
+.choices-container {
+  margin-top: 8px;
+}
+
+.checkbox-container .checkbox-choice-button {
+  margin-bottom: 4px;
+}
+
+#file-upload-button {
+  background: var(--primary-color);
+  color: #FFFFFF;
+}
+
+#file-upload-button-icon {
+  color: #FFFFFF;
+}
+
+.display-none {
+  display: none;
+}
+
+.checkbox-choices-container {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.checkbox-submit {
+  width: 70px;
+  margin-top: 12px;
+}
+
+/*^ Animated Checkbox ^*/
+
+.checkbox {
+  display: inline-block;
+  padding: 5px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+.checkbox label {
+  cursor: pointer;
+  padding-left: 0;
+}
+.checkbox input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  margin: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  left: 0;
+  pointer-events: none;
+}
+.checkbox .checkbox-material {
+  vertical-align: middle;
+  position: relative;
+  top: 3px;
+}
+.checkbox .checkbox-material:before {
+  position: absolute;
+  left: 8px;
+  top: 2px;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 4px;
+  width: 4px;
+  border-radius: 100%;
+  z-index: 1;
+  opacity: 0;
+  margin: 0;
+}
+.checkbox .checkbox-material .check {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 1;
+  margin-right: 4px;
+}
+.checkbox .checkbox-material .check:before {
+  position: absolute;
+  content: "";
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  display: block;
+  margin-top: -4px;
+  margin-left: 6px;
+  width: 0;
+  height: 0;
+  box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
+  -webkit-animation: checkbox-off 0.3s forwards ease-out;
+          animation: checkbox-off 0.3s forwards ease-out;
+}
+.checkbox input[type=checkbox]:focus + .checkbox-material .check:after {
+  opacity: 0.2;
+}
+.checkbox input[type=checkbox]:checked + .checkbox-material .check:before {
+  box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  -webkit-animation: checkbox-on 0.3s forwards ease-out;
+          animation: checkbox-on 0.3s forwards ease-out;
+}
+.checkbox input[type=checkbox]:not(:checked) + .checkbox-material:before {
+  -webkit-animation: rippleOff 700ms forwards ease-out;
+          animation: rippleOff 700ms forwards ease-out;
+}
+.checkbox input[type=checkbox]:checked + .checkbox-material:before {
+  -webkit-animation: rippleOn 700ms forwards ease-out;
+          animation: rippleOn 700ms forwards ease-out;
+}
+.checkbox input[type=checkbox]:not(:checked) + .checkbox-material .check:after {
+  -webkit-animation: rippleOff 700ms forwards ease-out;
+          animation: rippleOff 700ms forwards ease-out;
+}
+.checkbox input[type=checkbox]:checked + .checkbox-material .check:after {
+  -webkit-animation: rippleOn 700ms forwards ease-out;
+          animation: rippleOn 700ms forwards ease-out;
+}
+.checkbox input[type=checkbox][disabled]:not(:checked) ~ .checkbox-material .check:before,
+.checkbox input[type=checkbox][disabled] + .circle {
+  opacity: 0.5;
+}
+.checkbox input[type=checkbox][disabled] + .checkbox-material .check:after {
+  background-color: rgba(0, 0, 0, 0.84);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.coloured .checkbox-material .check {
+  color: var(--primary-color);
+}
+.coloured .checkbox-material:before {
+  background-color: var(--primary-color);
+}
+.coloured input[type=checkbox]:checked + .checkbox-material .check {
+  color: var(--primary-color);
+}
+
+@-webkit-keyframes checkbox-on {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+
+@keyframes checkbox-on {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+@-webkit-keyframes checkbox-off {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0px;
+    height: 0px;
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+  }
+  51% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0px 0px 0 10px inset;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0px 0px 0 0px inset;
+  }
+}
+@keyframes checkbox-off {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0px;
+    height: 0px;
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+  }
+  51% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0px 0px 0 10px inset;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0px 0px 0 0px inset;
+  }
+}
+
+@-webkit-keyframes rippleOn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(13, 13);
+            transform: scale(13, 13);
+  }
+}
+@keyframes rippleOn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(13, 13);
+            transform: scale(13, 13);
+  }
+}
+@-webkit-keyframes rippleOff {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(13, 13);
+            transform: scale(13, 13);
+  }
+}
+@keyframes rippleOff {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(13, 13);
+            transform: scale(13, 13);
+  }
+}
+
+.uppercase > input {
+  text-transform: uppercase;
+}
+
+
+/*$ Animated Checkbox $*/

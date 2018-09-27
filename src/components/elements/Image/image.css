@@ -1,0 +1,310 @@
+/*!
+ * # Semantic UI 2.3.3 - Image
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+             Image
+*******************************/
+
+.react-chatbot-ui.image {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  background-color: transparent;
+}
+img.react-chatbot-ui.image {
+  display: block;
+}
+.react-chatbot-ui.image svg,
+.react-chatbot-ui.image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*******************************
+            States
+*******************************/
+
+.react-chatbot-ui.hidden.images,
+.react-chatbot-ui.hidden.image {
+  display: none;
+}
+.react-chatbot-ui.hidden.transition.images,
+.react-chatbot-ui.hidden.transition.image {
+  display: block;
+  visibility: hidden;
+}
+.react-chatbot-ui.images > .hidden.transition {
+  display: inline-block;
+  visibility: hidden;
+}
+.react-chatbot-ui.disabled.images,
+.react-chatbot-ui.disabled.image {
+  cursor: default;
+  opacity: 0.45;
+}
+
+
+/*******************************
+          Variations
+*******************************/
+
+
+/*--------------
+     Inline
+---------------*/
+
+.react-chatbot-ui.inline.image,
+.react-chatbot-ui.inline.image svg,
+.react-chatbot-ui.inline.image img {
+  display: inline-block;
+}
+
+/*------------------
+  Vertical Aligned
+-------------------*/
+
+.react-chatbot-ui.top.aligned.images .image,
+.react-chatbot-ui.top.aligned.image,
+.react-chatbot-ui.top.aligned.image svg,
+.react-chatbot-ui.top.aligned.image img {
+  display: inline-block;
+  vertical-align: top;
+}
+.react-chatbot-ui.middle.aligned.images .image,
+.react-chatbot-ui.middle.aligned.image,
+.react-chatbot-ui.middle.aligned.image svg,
+.react-chatbot-ui.middle.aligned.image img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.react-chatbot-ui.bottom.aligned.images .image,
+.react-chatbot-ui.bottom.aligned.image,
+.react-chatbot-ui.bottom.aligned.image svg,
+.react-chatbot-ui.bottom.aligned.image img {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/*--------------
+     Rounded
+---------------*/
+
+.react-chatbot-ui.rounded.images .image,
+.react-chatbot-ui.rounded.image,
+.react-chatbot-ui.rounded.images .image > *,
+.react-chatbot-ui.rounded.image > * {
+  border-radius: 0.3125em;
+}
+
+/*--------------
+    Bordered
+---------------*/
+
+.react-chatbot-ui.bordered.images .image,
+.react-chatbot-ui.bordered.images img,
+.react-chatbot-ui.bordered.images svg,
+.react-chatbot-ui.bordered.image img,
+.react-chatbot-ui.bordered.image svg,
+img.react-chatbot-ui.bordered.image {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/*--------------
+    Circular
+---------------*/
+
+.react-chatbot-ui.circular.images,
+.react-chatbot-ui.circular.image {
+  overflow: hidden;
+}
+.react-chatbot-ui.circular.images .image,
+.react-chatbot-ui.circular.image,
+.react-chatbot-ui.circular.images .image > *,
+.react-chatbot-ui.circular.image > * {
+  border-radius: 500rem;
+}
+
+/*--------------
+     Fluid
+---------------*/
+
+.react-chatbot-ui.fluid.images,
+.react-chatbot-ui.fluid.image,
+.react-chatbot-ui.fluid.images img,
+.react-chatbot-ui.fluid.images svg,
+.react-chatbot-ui.fluid.image svg,
+.react-chatbot-ui.fluid.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*--------------
+     Avatar
+---------------*/
+
+.react-chatbot-ui.avatar.images .image,
+.react-chatbot-ui.avatar.images img,
+.react-chatbot-ui.avatar.images svg,
+.react-chatbot-ui.avatar.image img,
+.react-chatbot-ui.avatar.image svg,
+.react-chatbot-ui.avatar.image {
+  margin-right: 0.25em;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border-radius: 500rem;
+}
+
+/*-------------------
+       Spaced
+--------------------*/
+
+.react-chatbot-ui.spaced.image {
+  display: inline-block !important;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+.react-chatbot-ui[class*="left spaced"].image {
+  margin-left: 0.5em;
+  margin-right: 0em;
+}
+.react-chatbot-ui[class*="right spaced"].image {
+  margin-left: 0em;
+  margin-right: 0.5em;
+}
+
+/*-------------------
+       Floated
+--------------------*/
+
+.react-chatbot-ui.floated.image,
+.react-chatbot-ui.floated.images {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.react-chatbot-ui.right.floated.images,
+.react-chatbot-ui.right.floated.image {
+  float: right;
+  margin-right: 0em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+.react-chatbot-ui.floated.images:last-child,
+.react-chatbot-ui.floated.image:last-child {
+  margin-bottom: 0em;
+}
+.react-chatbot-ui.centered.images,
+.react-chatbot-ui.centered.image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------
+     Sizes
+---------------*/
+
+.react-chatbot-ui.mini.images .image,
+.react-chatbot-ui.mini.images img,
+.react-chatbot-ui.mini.images svg,
+.react-chatbot-ui.mini.image {
+  width: 35px;
+  height: auto;
+  font-size: 0.78571429rem;
+}
+.react-chatbot-ui.tiny.images .image,
+.react-chatbot-ui.tiny.images img,
+.react-chatbot-ui.tiny.images svg,
+.react-chatbot-ui.tiny.image {
+  width: 80px;
+  height: auto;
+  font-size: 0.85714286rem;
+}
+.react-chatbot-ui.small.images .image,
+.react-chatbot-ui.small.images img,
+.react-chatbot-ui.small.images svg,
+.react-chatbot-ui.small.image {
+  width: 150px;
+  height: auto;
+  font-size: 0.92857143rem;
+}
+.react-chatbot-ui.medium.images .image,
+.react-chatbot-ui.medium.images img,
+.react-chatbot-ui.medium.images svg,
+.react-chatbot-ui.medium.image {
+  width: 300px;
+  height: auto;
+  font-size: 1rem;
+}
+.react-chatbot-ui.large.images .image,
+.react-chatbot-ui.large.images img,
+.react-chatbot-ui.large.images svg,
+.react-chatbot-ui.large.image {
+  width: 450px;
+  height: auto;
+  font-size: 1.14285714rem;
+}
+.react-chatbot-ui.big.images .image,
+.react-chatbot-ui.big.images img,
+.react-chatbot-ui.big.images svg,
+.react-chatbot-ui.big.image {
+  width: 600px;
+  height: auto;
+  font-size: 1.28571429rem;
+}
+.react-chatbot-ui.huge.images .image,
+.react-chatbot-ui.huge.images img,
+.react-chatbot-ui.huge.images svg,
+.react-chatbot-ui.huge.image {
+  width: 800px;
+  height: auto;
+  font-size: 1.42857143rem;
+}
+.react-chatbot-ui.massive.images .image,
+.react-chatbot-ui.massive.images img,
+.react-chatbot-ui.massive.images svg,
+.react-chatbot-ui.massive.image {
+  width: 960px;
+  height: auto;
+  font-size: 1.71428571rem;
+}
+
+
+/*******************************
+              Groups
+*******************************/
+
+.react-chatbot-ui.images {
+  font-size: 0em;
+  margin: 0em -0.25rem 0rem;
+}
+.react-chatbot-ui.images .image,
+.react-chatbot-ui.images > img,
+.react-chatbot-ui.images > svg {
+  display: inline-block;
+  margin: 0em 0.25rem 0.5rem;
+}
+
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+
+
+/*******************************
+         Site Overrides
+*******************************/
+

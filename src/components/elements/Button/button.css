@@ -1,0 +1,3863 @@
+/*!
+ * # Semantic UI 2.3.3 - Button
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Button
+*******************************/
+
+.react-chatbot-ui.button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  background: #E0E1E2 none;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: 0em 0.25em 0em 0em;
+  padding: 0.78571429em 1.5em 0.78571429em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: bold;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.28571429rem;
+  -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  will-change: '';
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/*******************************
+            States
+*******************************/
+
+
+/*--------------
+      Hover
+---------------*/
+
+.react-chatbot-ui.button:hover {
+  background-color: #CACBCD;
+  background-image: none;
+  -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+  color: rgba(0, 0, 0, 0.8);
+}
+.react-chatbot-ui.button:hover .icon {
+  opacity: 0.85;
+}
+
+/*--------------
+      Focus
+---------------*/
+
+.react-chatbot-ui.button:focus {
+  background-color: #CACBCD;
+  color: rgba(0, 0, 0, 0.8);
+  background-image: '' !important;
+  -webkit-box-shadow: '' !important;
+          box-shadow: '' !important;
+}
+.react-chatbot-ui.button:focus .icon {
+  opacity: 0.85;
+}
+
+/*--------------
+      Down
+---------------*/
+
+.react-chatbot-ui.button:active,
+.react-chatbot-ui.active.button:active {
+  background-color: #BABBBC;
+  background-image: '';
+  color: rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 0px 0px 0px 1px transparent inset, none;
+          box-shadow: 0px 0px 0px 1px transparent inset, none;
+}
+
+/*--------------
+     Active
+---------------*/
+
+.react-chatbot-ui.active.button {
+  background-color: #C0C1C2;
+  background-image: none;
+  -webkit-box-shadow: 0px 0px 0px 1px transparent inset;
+          box-shadow: 0px 0px 0px 1px transparent inset;
+  color: rgba(0, 0, 0, 0.95);
+}
+.react-chatbot-ui.active.button:hover {
+  background-color: #C0C1C2;
+  background-image: none;
+  color: rgba(0, 0, 0, 0.95);
+}
+.react-chatbot-ui.active.button:active {
+  background-color: #C0C1C2;
+  background-image: none;
+}
+
+/*--------------
+    Loading
+---------------*/
+
+
+/* Specificity hack */
+.react-chatbot-ui.loading.loading.loading.loading.loading.loading.button {
+  position: relative;
+  cursor: default;
+  text-shadow: none !important;
+  color: transparent !important;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all 0s linear, opacity 0.1s ease;
+  transition: all 0s linear, opacity 0.1s ease;
+}
+.react-chatbot-ui.loading.button:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  margin: -0.64285714em 0em 0em -0.64285714em;
+  width: 1.28571429em;
+  height: 1.28571429em;
+  border-radius: 500rem;
+  border: 0.2em solid rgba(0, 0, 0, 0.15);
+}
+.react-chatbot-ui.loading.button:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  margin: -0.64285714em 0em 0em -0.64285714em;
+  width: 1.28571429em;
+  height: 1.28571429em;
+  -webkit-animation: button-spin 0.6s linear;
+          animation: button-spin 0.6s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 500rem;
+  border-color: #FFFFFF transparent transparent;
+  border-style: solid;
+  border-width: 0.2em;
+  -webkit-box-shadow: 0px 0px 0px 1px transparent;
+          box-shadow: 0px 0px 0px 1px transparent;
+}
+.react-chatbot-ui.labeled.icon.loading.button .icon {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+@-webkit-keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.react-chatbot-ui.basic.loading.button:not(.inverted):before {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.react-chatbot-ui.basic.loading.button:not(.inverted):after {
+  border-top-color: #767676;
+}
+
+/*-------------------
+      Disabled
+--------------------*/
+
+.react-chatbot-ui.buttons .disabled.button,
+.react-chatbot-ui.disabled.button,
+.react-chatbot-ui.button:disabled,
+.react-chatbot-ui.disabled.button:hover,
+.react-chatbot-ui.disabled.active.button {
+  cursor: default;
+  opacity: 0.45 !important;
+  background-image: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  pointer-events: none !important;
+}
+
+/* Basic Group With Disabled */
+.react-chatbot-ui.basic.buttons .react-chatbot-ui.disabled.button {
+  border-color: rgba(34, 36, 38, 0.5);
+}
+
+
+/*******************************
+             Types
+*******************************/
+
+
+/*-------------------
+       Animated
+--------------------*/
+
+.react-chatbot-ui.animated.button {
+  position: relative;
+  overflow: hidden;
+  padding-right: 0em !important;
+  vertical-align: middle;
+  z-index: 1;
+}
+.react-chatbot-ui.animated.button .content {
+  will-change: transform, opacity;
+}
+.react-chatbot-ui.animated.button .visible.content {
+  position: relative;
+  margin-right: 1.5em;
+}
+.react-chatbot-ui.animated.button .hidden.content {
+  position: absolute;
+  width: 100%;
+}
+
+/* Horizontal */
+.react-chatbot-ui.animated.button .visible.content,
+.react-chatbot-ui.animated.button .hidden.content {
+  -webkit-transition: right 0.3s ease 0s;
+  transition: right 0.3s ease 0s;
+}
+.react-chatbot-ui.animated.button .visible.content {
+  left: auto;
+  right: 0%;
+}
+.react-chatbot-ui.animated.button .hidden.content {
+  top: 50%;
+  left: auto;
+  right: -100%;
+  margin-top: -0.5em;
+}
+.react-chatbot-ui.animated.button:focus .visible.content,
+.react-chatbot-ui.animated.button:hover .visible.content {
+  left: auto;
+  right: 200%;
+}
+.react-chatbot-ui.animated.button:focus .hidden.content,
+.react-chatbot-ui.animated.button:hover .hidden.content {
+  left: auto;
+  right: 0%;
+}
+
+/* Vertical */
+.react-chatbot-ui.vertical.animated.button .visible.content,
+.react-chatbot-ui.vertical.animated.button .hidden.content {
+  -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease;
+  transition: top 0.3s ease, -webkit-transform 0.3s ease;
+  transition: top 0.3s ease, transform 0.3s ease;
+  transition: top 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.react-chatbot-ui.vertical.animated.button .visible.content {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  right: auto;
+}
+.react-chatbot-ui.vertical.animated.button .hidden.content {
+  top: -50%;
+  left: 0%;
+  right: auto;
+}
+.react-chatbot-ui.vertical.animated.button:focus .visible.content,
+.react-chatbot-ui.vertical.animated.button:hover .visible.content {
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+  right: auto;
+}
+.react-chatbot-ui.vertical.animated.button:focus .hidden.content,
+.react-chatbot-ui.vertical.animated.button:hover .hidden.content {
+  top: 50%;
+  right: auto;
+}
+
+/* Fade */
+.react-chatbot-ui.fade.animated.button .visible.content,
+.react-chatbot-ui.fade.animated.button .hidden.content {
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.react-chatbot-ui.fade.animated.button .visible.content {
+  left: auto;
+  right: auto;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.react-chatbot-ui.fade.animated.button .hidden.content {
+  opacity: 0;
+  left: 0%;
+  right: auto;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+.react-chatbot-ui.fade.animated.button:focus .visible.content,
+.react-chatbot-ui.fade.animated.button:hover .visible.content {
+  left: auto;
+  right: auto;
+  opacity: 0;
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+}
+.react-chatbot-ui.fade.animated.button:focus .hidden.content,
+.react-chatbot-ui.fade.animated.button:hover .hidden.content {
+  left: 0%;
+  right: auto;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+/*-------------------
+       Inverted
+--------------------*/
+
+.react-chatbot-ui.inverted.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #FFFFFF inset !important;
+          box-shadow: 0px 0px 0px 2px #FFFFFF inset !important;
+  background: transparent none;
+  color: #FFFFFF;
+  text-shadow: none !important;
+}
+
+/* Group */
+.react-chatbot-ui.inverted.buttons .button {
+  margin: 0px 0px 0px -2px;
+}
+.react-chatbot-ui.inverted.buttons .button:first-child {
+  margin-left: 0em;
+}
+.react-chatbot-ui.inverted.vertical.buttons .button {
+  margin: 0px 0px -2px 0px;
+}
+.react-chatbot-ui.inverted.vertical.buttons .button:first-child {
+  margin-top: 0em;
+}
+
+/* States */
+
+/* Hover */
+.react-chatbot-ui.inverted.button:hover {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 0px 2px #FFFFFF inset !important;
+          box-shadow: 0px 0px 0px 2px #FFFFFF inset !important;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Active / Focus */
+.react-chatbot-ui.inverted.button:focus,
+.react-chatbot-ui.inverted.button.active {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 0px 2px #FFFFFF inset !important;
+          box-shadow: 0px 0px 0px 2px #FFFFFF inset !important;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Active Focus */
+.react-chatbot-ui.inverted.button.active:focus {
+  background: #DCDDDE;
+  -webkit-box-shadow: 0px 0px 0px 2px #DCDDDE inset !important;
+          box-shadow: 0px 0px 0px 2px #DCDDDE inset !important;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/*-------------------
+    Labeled Button
+--------------------*/
+
+.react-chatbot-ui.labeled.button:not(.icon) {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: none !important;
+  padding: 0px !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+.react-chatbot-ui.labeled.button > .button {
+  margin: 0px;
+}
+.react-chatbot-ui.labeled.button > .label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 0px 0px -1px !important;
+  padding: '';
+  font-size: 1em;
+  border-color: rgba(34, 36, 38, 0.15);
+}
+
+/* Tag */
+.react-chatbot-ui.labeled.button > .tag.label:before {
+  width: 1.85em;
+  height: 1.85em;
+}
+
+/* Right */
+.react-chatbot-ui.labeled.button:not([class*="left labeled"]) > .button {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.react-chatbot-ui.labeled.button:not([class*="left labeled"]) > .label {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+/* Left Side */
+.react-chatbot-ui[class*="left labeled"].button > .button {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.react-chatbot-ui[class*="left labeled"].button > .label {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+/*-------------------
+       Social
+--------------------*/
+
+
+/* Facebook */
+.react-chatbot-ui.facebook.button {
+  background-color: #3B5998;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.facebook.button:hover {
+  background-color: #304d8a;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.facebook.button:active {
+  background-color: #2d4373;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Twitter */
+.react-chatbot-ui.twitter.button {
+  background-color: #55ACEE;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.twitter.button:hover {
+  background-color: #35a2f4;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.twitter.button:active {
+  background-color: #2795e9;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Google Plus */
+.react-chatbot-ui.google.plus.button {
+  background-color: #DD4B39;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.google.plus.button:hover {
+  background-color: #e0321c;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.google.plus.button:active {
+  background-color: #c23321;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Linked In */
+.react-chatbot-ui.linkedin.button {
+  background-color: #1F88BE;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.linkedin.button:hover {
+  background-color: #147baf;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.linkedin.button:active {
+  background-color: #186992;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* YouTube */
+.react-chatbot-ui.youtube.button {
+  background-color: #FF0000;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.youtube.button:hover {
+  background-color: #e60000;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.youtube.button:active {
+  background-color: #cc0000;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Instagram */
+.react-chatbot-ui.instagram.button {
+  background-color: #49769C;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.instagram.button:hover {
+  background-color: #3d698e;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.instagram.button:active {
+  background-color: #395c79;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Pinterest */
+.react-chatbot-ui.pinterest.button {
+  background-color: #BD081C;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.pinterest.button:hover {
+  background-color: #ac0013;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.pinterest.button:active {
+  background-color: #8c0615;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* VK */
+.react-chatbot-ui.vk.button {
+  background-color: #4D7198;
+  color: #FFFFFF;
+  background-image: none;
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.vk.button:hover {
+  background-color: #41648a;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.vk.button:active {
+  background-color: #3c5876;
+  color: #FFFFFF;
+}
+
+/*--------------
+     Icon
+---------------*/
+
+.react-chatbot-ui.button > .icon:not(.button) {
+  height: 0.85714286em;
+  opacity: 0.8;
+  margin: 0em 0.42857143em 0em -0.21428571em;
+  -webkit-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
+  vertical-align: '';
+  color: '';
+}
+.react-chatbot-ui.button:not(.icon) > .icon:not(.button):not(.dropdown) {
+  margin: 0em 0.42857143em 0em -0.21428571em;
+}
+.react-chatbot-ui.button:not(.icon) > .right.icon:not(.button):not(.dropdown) {
+  margin: 0em -0.21428571em 0em 0.42857143em;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+
+/*-------------------
+       Floated
+--------------------*/
+
+.react-chatbot-ui[class*="left floated"].buttons,
+.react-chatbot-ui[class*="left floated"].button {
+  float: left;
+  margin-left: 0em;
+  margin-right: 0.25em;
+}
+.react-chatbot-ui[class*="right floated"].buttons,
+.react-chatbot-ui[class*="right floated"].button {
+  float: right;
+  margin-right: 0em;
+  margin-left: 0.25em;
+}
+
+/*-------------------
+       Compact
+--------------------*/
+
+.react-chatbot-ui.compact.buttons .button,
+.react-chatbot-ui.compact.button {
+  padding: 0.58928571em 1.125em 0.58928571em;
+}
+.react-chatbot-ui.compact.icon.buttons .button,
+.react-chatbot-ui.compact.icon.button {
+  padding: 0.58928571em 0.58928571em 0.58928571em;
+}
+.react-chatbot-ui.compact.labeled.icon.buttons .button,
+.react-chatbot-ui.compact.labeled.icon.button {
+  padding: 0.58928571em 3.69642857em 0.58928571em;
+}
+
+/*-------------------
+        Sizes
+--------------------*/
+
+.react-chatbot-ui.mini.buttons .button,
+.react-chatbot-ui.mini.buttons .or,
+.react-chatbot-ui.mini.button {
+  font-size: 0.78571429rem;
+}
+.react-chatbot-ui.tiny.buttons .button,
+.react-chatbot-ui.tiny.buttons .or,
+.react-chatbot-ui.tiny.button {
+  font-size: 0.85714286rem;
+}
+.react-chatbot-ui.small.buttons .button,
+.react-chatbot-ui.small.buttons .or,
+.react-chatbot-ui.small.button {
+  font-size: 0.92857143rem;
+}
+.react-chatbot-ui.buttons .button,
+.react-chatbot-ui.buttons .or,
+.react-chatbot-ui.button {
+  font-size: 1rem;
+}
+.react-chatbot-ui.large.buttons .button,
+.react-chatbot-ui.large.buttons .or,
+.react-chatbot-ui.large.button {
+  font-size: 1.14285714rem;
+}
+.react-chatbot-ui.big.buttons .button,
+.react-chatbot-ui.big.buttons .or,
+.react-chatbot-ui.big.button {
+  font-size: 1.28571429rem;
+}
+.react-chatbot-ui.huge.buttons .button,
+.react-chatbot-ui.huge.buttons .or,
+.react-chatbot-ui.huge.button {
+  font-size: 1.42857143rem;
+}
+.react-chatbot-ui.massive.buttons .button,
+.react-chatbot-ui.massive.buttons .or,
+.react-chatbot-ui.massive.button {
+  font-size: 1.71428571rem;
+}
+
+/*--------------
+    Icon Only
+---------------*/
+
+.react-chatbot-ui.icon.buttons .button,
+.react-chatbot-ui.icon.button {
+  padding: 0.78571429em 0.78571429em 0.78571429em;
+}
+.react-chatbot-ui.icon.buttons .button > .icon,
+.react-chatbot-ui.icon.button > .icon {
+  opacity: 0.9;
+  margin: 0em !important;
+  vertical-align: top;
+}
+
+/*-------------------
+        Basic
+--------------------*/
+
+.react-chatbot-ui.basic.buttons .button,
+.react-chatbot-ui.basic.button {
+  background: transparent none !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+  font-weight: normal;
+  border-radius: 0.28571429rem;
+  text-transform: none;
+  text-shadow: none !important;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.basic.buttons {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 0.28571429rem;
+}
+.react-chatbot-ui.basic.buttons .button {
+  border-radius: 0em;
+}
+.react-chatbot-ui.basic.buttons .button:hover,
+.react-chatbot-ui.basic.button:hover {
+  background: #FFFFFF !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.35) inset, 0px 0px 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.35) inset, 0px 0px 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.basic.buttons .button:focus,
+.react-chatbot-ui.basic.button:focus {
+  background: #FFFFFF !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.35) inset, 0px 0px 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.35) inset, 0px 0px 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.basic.buttons .button:active,
+.react-chatbot-ui.basic.button:active {
+  background: #F8F8F8 !important;
+  color: rgba(0, 0, 0, 0.9) !important;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 1px 4px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 1px 4px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.basic.buttons .active.button,
+.react-chatbot-ui.basic.active.button {
+  background: rgba(0, 0, 0, 0.05) !important;
+  -webkit-box-shadow: '' !important;
+          box-shadow: '' !important;
+  color: rgba(0, 0, 0, 0.95) !important;
+}
+.react-chatbot-ui.basic.buttons .active.button:hover,
+.react-chatbot-ui.basic.active.button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Vertical */
+.react-chatbot-ui.basic.buttons .button:hover {
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.35) inset, 0px 0px 0px 0px rgba(34, 36, 38, 0.15) inset inset;
+          box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.35) inset, 0px 0px 0px 0px rgba(34, 36, 38, 0.15) inset inset;
+}
+.react-chatbot-ui.basic.buttons .button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 1px 4px 0px rgba(34, 36, 38, 0.15) inset inset;
+          box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 1px 4px 0px rgba(34, 36, 38, 0.15) inset inset;
+}
+.react-chatbot-ui.basic.buttons .active.button {
+  -webkit-box-shadow: '' !important;
+          box-shadow: '' !important;
+}
+
+/* Standard Basic Inverted */
+.react-chatbot-ui.basic.inverted.buttons .button,
+.react-chatbot-ui.basic.inverted.button {
+  background-color: transparent !important;
+  color: #F9FAFB !important;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+}
+.react-chatbot-ui.basic.inverted.buttons .button:hover,
+.react-chatbot-ui.basic.inverted.button:hover {
+  color: #FFFFFF !important;
+  -webkit-box-shadow: 0px 0px 0px 2px #ffffff inset !important;
+          box-shadow: 0px 0px 0px 2px #ffffff inset !important;
+}
+.react-chatbot-ui.basic.inverted.buttons .button:focus,
+.react-chatbot-ui.basic.inverted.button:focus {
+  color: #FFFFFF !important;
+  -webkit-box-shadow: 0px 0px 0px 2px #ffffff inset !important;
+          box-shadow: 0px 0px 0px 2px #ffffff inset !important;
+}
+.react-chatbot-ui.basic.inverted.buttons .button:active,
+.react-chatbot-ui.basic.inverted.button:active {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #FFFFFF !important;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.9) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.9) inset !important;
+}
+.react-chatbot-ui.basic.inverted.buttons .active.button,
+.react-chatbot-ui.basic.inverted.active.button {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  text-shadow: none;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.7) inset;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.7) inset;
+}
+.react-chatbot-ui.basic.inverted.buttons .active.button:hover,
+.react-chatbot-ui.basic.inverted.active.button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: 0px 0px 0px 2px #ffffff inset !important;
+          box-shadow: 0px 0px 0px 2px #ffffff inset !important;
+}
+
+/* Basic Group */
+.react-chatbot-ui.basic.buttons .button {
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.react-chatbot-ui.basic.vertical.buttons .button {
+  border-left: none;
+}
+.react-chatbot-ui.basic.vertical.buttons .button {
+  border-left-width: 0px;
+  border-top: 1px solid rgba(34, 36, 38, 0.15);
+}
+.react-chatbot-ui.basic.vertical.buttons .button:first-child {
+  border-top-width: 0px;
+}
+
+/*--------------
+  Labeled Icon
+---------------*/
+
+.react-chatbot-ui.labeled.icon.buttons .button,
+.react-chatbot-ui.labeled.icon.button {
+  position: relative;
+  padding-left: 4.07142857em !important;
+  padding-right: 1.5em !important;
+}
+
+/* Left Labeled */
+.react-chatbot-ui.labeled.icon.buttons > .button > .icon,
+.react-chatbot-ui.labeled.icon.button > .icon {
+  position: absolute;
+  height: 100%;
+  line-height: 1;
+  border-radius: 0px;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  text-align: center;
+  margin: 0em;
+  width: 2.57142857em;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: '';
+  -webkit-box-shadow: -1px 0px 0px 0px transparent inset;
+          box-shadow: -1px 0px 0px 0px transparent inset;
+}
+
+/* Left Labeled */
+.react-chatbot-ui.labeled.icon.buttons > .button > .icon,
+.react-chatbot-ui.labeled.icon.button > .icon {
+  top: 0em;
+  left: 0em;
+}
+
+/* Right Labeled */
+.react-chatbot-ui[class*="right labeled"].icon.button {
+  padding-right: 4.07142857em !important;
+  padding-left: 1.5em !important;
+}
+.react-chatbot-ui[class*="right labeled"].icon.button > .icon {
+  left: auto;
+  right: 0em;
+  border-radius: 0px;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  -webkit-box-shadow: 1px 0px 0px 0px transparent inset;
+          box-shadow: 1px 0px 0px 0px transparent inset;
+}
+.react-chatbot-ui.labeled.icon.buttons > .button > .icon:before,
+.react-chatbot-ui.labeled.icon.button > .icon:before,
+.react-chatbot-ui.labeled.icon.buttons > .button > .icon:after,
+.react-chatbot-ui.labeled.icon.button > .icon:after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.react-chatbot-ui.labeled.icon.buttons .button > .icon {
+  border-radius: 0em;
+}
+.react-chatbot-ui.labeled.icon.buttons .button:first-child > .icon {
+  border-top-left-radius: 0.28571429rem;
+  border-bottom-left-radius: 0.28571429rem;
+}
+.react-chatbot-ui.labeled.icon.buttons .button:last-child > .icon {
+  border-top-right-radius: 0.28571429rem;
+  border-bottom-right-radius: 0.28571429rem;
+}
+.react-chatbot-ui.vertical.labeled.icon.buttons .button:first-child > .icon {
+  border-radius: 0em;
+  border-top-left-radius: 0.28571429rem;
+}
+.react-chatbot-ui.vertical.labeled.icon.buttons .button:last-child > .icon {
+  border-radius: 0em;
+  border-bottom-left-radius: 0.28571429rem;
+}
+
+/* Fluid Labeled */
+.react-chatbot-ui.fluid[class*="left labeled"].icon.button,
+.react-chatbot-ui.fluid[class*="right labeled"].icon.button {
+  padding-left: 1.5em !important;
+  padding-right: 1.5em !important;
+}
+
+/*--------------
+     Toggle
+---------------*/
+
+
+/* Toggle (Modifies active state to give affordances) */
+.react-chatbot-ui.toggle.buttons .active.button,
+.react-chatbot-ui.buttons .button.toggle.active,
+.react-chatbot-ui.button.toggle.active {
+  background-color: #21BA45 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  text-shadow: none;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.button.toggle.active:hover {
+  background-color: #16ab39 !important;
+  text-shadow: none;
+  color: #FFFFFF !important;
+}
+
+/*--------------
+    Circular
+---------------*/
+
+.react-chatbot-ui.circular.button {
+  border-radius: 10em;
+}
+.react-chatbot-ui.circular.button > .icon {
+  width: 1em;
+  vertical-align: baseline;
+}
+
+/*-------------------
+      Or Buttons
+--------------------*/
+
+.react-chatbot-ui.buttons .or {
+  position: relative;
+  width: 0.3em;
+  height: 2.57142857em;
+  z-index: 3;
+}
+.react-chatbot-ui.buttons .or:before {
+  position: absolute;
+  text-align: center;
+  border-radius: 500rem;
+  content: 'or';
+  top: 50%;
+  left: 50%;
+  background-color: #FFFFFF;
+  text-shadow: none;
+  margin-top: -0.89285714em;
+  margin-left: -0.89285714em;
+  width: 1.78571429em;
+  height: 1.78571429em;
+  line-height: 1.78571429em;
+  color: rgba(0, 0, 0, 0.4);
+  font-style: normal;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 0px 0px 1px transparent inset;
+          box-shadow: 0px 0px 0px 1px transparent inset;
+}
+.react-chatbot-ui.buttons .or[data-text]:before {
+  content: attr(data-text);
+}
+
+/* Fluid Or */
+.react-chatbot-ui.fluid.buttons .or {
+  width: 0em !important;
+}
+.react-chatbot-ui.fluid.buttons .or:after {
+  display: none;
+}
+
+/*-------------------
+       Attached
+--------------------*/
+
+
+/* Singular */
+.react-chatbot-ui.attached.button {
+  position: relative;
+  display: block;
+  margin: 0em;
+  border-radius: 0em;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15) !important;
+          box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15) !important;
+}
+
+/* Top / Bottom */
+.react-chatbot-ui.attached.top.button {
+  border-radius: 0.28571429rem 0.28571429rem 0em 0em;
+}
+.react-chatbot-ui.attached.bottom.button {
+  border-radius: 0em 0em 0.28571429rem 0.28571429rem;
+}
+
+/* Left / Right */
+.react-chatbot-ui.left.attached.button {
+  display: inline-block;
+  border-left: none;
+  text-align: right;
+  padding-right: 0.75em;
+  border-radius: 0.28571429rem 0em 0em 0.28571429rem;
+}
+.react-chatbot-ui.right.attached.button {
+  display: inline-block;
+  text-align: left;
+  padding-left: 0.75em;
+  border-radius: 0em 0.28571429rem 0.28571429rem 0em;
+}
+
+/* Plural */
+.react-chatbot-ui.attached.buttons {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 0em;
+  width: auto !important;
+  z-index: 2;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+.react-chatbot-ui.attached.buttons .button {
+  margin: 0em;
+}
+.react-chatbot-ui.attached.buttons .button:first-child {
+  border-radius: 0em;
+}
+.react-chatbot-ui.attached.buttons .button:last-child {
+  border-radius: 0em;
+}
+
+/* Top / Bottom */
+.react-chatbot-ui[class*="top attached"].buttons {
+  margin-bottom: -1px;
+  border-radius: 0.28571429rem 0.28571429rem 0em 0em;
+}
+.react-chatbot-ui[class*="top attached"].buttons .button:first-child {
+  border-radius: 0.28571429rem 0em 0em 0em;
+}
+.react-chatbot-ui[class*="top attached"].buttons .button:last-child {
+  border-radius: 0em 0.28571429rem 0em 0em;
+}
+.react-chatbot-ui[class*="bottom attached"].buttons {
+  margin-top: -1px;
+  border-radius: 0em 0em 0.28571429rem 0.28571429rem;
+}
+.react-chatbot-ui[class*="bottom attached"].buttons .button:first-child {
+  border-radius: 0em 0em 0em 0.28571429rem;
+}
+.react-chatbot-ui[class*="bottom attached"].buttons .button:last-child {
+  border-radius: 0em 0em 0.28571429rem 0em;
+}
+
+/* Left / Right */
+.react-chatbot-ui[class*="left attached"].buttons {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 0em;
+  margin-left: -1px;
+  border-radius: 0em 0.28571429rem 0.28571429rem 0em;
+}
+.react-chatbot-ui[class*="left attached"].buttons .button:first-child {
+  margin-left: -1px;
+  border-radius: 0em 0.28571429rem 0em 0em;
+}
+.react-chatbot-ui[class*="left attached"].buttons .button:last-child {
+  margin-left: -1px;
+  border-radius: 0em 0em 0.28571429rem 0em;
+}
+.react-chatbot-ui[class*="right attached"].buttons {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 0em;
+  margin-right: -1px;
+  border-radius: 0.28571429rem 0em 0em 0.28571429rem;
+}
+.react-chatbot-ui[class*="right attached"].buttons .button:first-child {
+  margin-left: -1px;
+  border-radius: 0.28571429rem 0em 0em 0em;
+}
+.react-chatbot-ui[class*="right attached"].buttons .button:last-child {
+  margin-left: -1px;
+  border-radius: 0em 0em 0em 0.28571429rem;
+}
+
+/*-------------------
+        Fluid
+--------------------*/
+
+.react-chatbot-ui.fluid.buttons,
+.react-chatbot-ui.fluid.button {
+  width: 100%;
+}
+.react-chatbot-ui.fluid.button {
+  display: block;
+}
+.react-chatbot-ui.two.buttons {
+  width: 100%;
+}
+.react-chatbot-ui.two.buttons > .button {
+  width: 50%;
+}
+.react-chatbot-ui.three.buttons {
+  width: 100%;
+}
+.react-chatbot-ui.three.buttons > .button {
+  width: 33.333%;
+}
+.react-chatbot-ui.four.buttons {
+  width: 100%;
+}
+.react-chatbot-ui.four.buttons > .button {
+  width: 25%;
+}
+.react-chatbot-ui.five.buttons {
+  width: 100%;
+}
+.react-chatbot-ui.five.buttons > .button {
+  width: 20%;
+}
+.react-chatbot-ui.six.buttons {
+  width: 100%;
+}
+.react-chatbot-ui.six.buttons > .button {
+  width: 16.666%;
+}
+.react-chatbot-ui.seven.buttons {
+  width: 100%;
+}
+.react-chatbot-ui.seven.buttons > .button {
+  width: 14.285%;
+}
+.react-chatbot-ui.eight.buttons {
+  width: 100%;
+}
+.react-chatbot-ui.eight.buttons > .button {
+  width: 12.500%;
+}
+.react-chatbot-ui.nine.buttons {
+  width: 100%;
+}
+.react-chatbot-ui.nine.buttons > .button {
+  width: 11.11%;
+}
+.react-chatbot-ui.ten.buttons {
+  width: 100%;
+}
+.react-chatbot-ui.ten.buttons > .button {
+  width: 10%;
+}
+.react-chatbot-ui.eleven.buttons {
+  width: 100%;
+}
+.react-chatbot-ui.eleven.buttons > .button {
+  width: 9.09%;
+}
+.react-chatbot-ui.twelve.buttons {
+  width: 100%;
+}
+.react-chatbot-ui.twelve.buttons > .button {
+  width: 8.3333%;
+}
+
+/* Fluid Vertical Buttons */
+.react-chatbot-ui.fluid.vertical.buttons,
+.react-chatbot-ui.fluid.vertical.buttons > .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+}
+.react-chatbot-ui.two.vertical.buttons > .button {
+  height: 50%;
+}
+.react-chatbot-ui.three.vertical.buttons > .button {
+  height: 33.333%;
+}
+.react-chatbot-ui.four.vertical.buttons > .button {
+  height: 25%;
+}
+.react-chatbot-ui.five.vertical.buttons > .button {
+  height: 20%;
+}
+.react-chatbot-ui.six.vertical.buttons > .button {
+  height: 16.666%;
+}
+.react-chatbot-ui.seven.vertical.buttons > .button {
+  height: 14.285%;
+}
+.react-chatbot-ui.eight.vertical.buttons > .button {
+  height: 12.500%;
+}
+.react-chatbot-ui.nine.vertical.buttons > .button {
+  height: 11.11%;
+}
+.react-chatbot-ui.ten.vertical.buttons > .button {
+  height: 10%;
+}
+.react-chatbot-ui.eleven.vertical.buttons > .button {
+  height: 9.09%;
+}
+.react-chatbot-ui.twelve.vertical.buttons > .button {
+  height: 8.3333%;
+}
+
+/*-------------------
+       Colors
+--------------------*/
+
+
+/*--- Black ---*/
+
+.react-chatbot-ui.black.buttons .button,
+.react-chatbot-ui.black.button {
+  background-color: #1B1C1D;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.black.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.black.buttons .button:hover,
+.react-chatbot-ui.black.button:hover {
+  background-color: #27292a;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.black.buttons .button:focus,
+.react-chatbot-ui.black.button:focus {
+  background-color: #2f3032;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.black.buttons .button:active,
+.react-chatbot-ui.black.button:active {
+  background-color: #343637;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.black.buttons .active.button,
+.react-chatbot-ui.black.buttons .active.button:active,
+.react-chatbot-ui.black.active.button,
+.react-chatbot-ui.black.button .active.button:active {
+  background-color: #0f0f10;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.black.buttons .button,
+.react-chatbot-ui.basic.black.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #1B1C1D inset !important;
+          box-shadow: 0px 0px 0px 1px #1B1C1D inset !important;
+  color: #1B1C1D !important;
+}
+.react-chatbot-ui.basic.black.buttons .button:hover,
+.react-chatbot-ui.basic.black.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #27292a inset !important;
+          box-shadow: 0px 0px 0px 1px #27292a inset !important;
+  color: #27292a !important;
+}
+.react-chatbot-ui.basic.black.buttons .button:focus,
+.react-chatbot-ui.basic.black.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #2f3032 inset !important;
+          box-shadow: 0px 0px 0px 1px #2f3032 inset !important;
+  color: #27292a !important;
+}
+.react-chatbot-ui.basic.black.buttons .active.button,
+.react-chatbot-ui.basic.black.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #0f0f10 inset !important;
+          box-shadow: 0px 0px 0px 1px #0f0f10 inset !important;
+  color: #343637 !important;
+}
+.react-chatbot-ui.basic.black.buttons .button:active,
+.react-chatbot-ui.basic.black.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #343637 inset !important;
+          box-shadow: 0px 0px 0px 1px #343637 inset !important;
+  color: #343637 !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.black.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.black.buttons .button,
+.react-chatbot-ui.inverted.black.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #D4D4D5 inset !important;
+          box-shadow: 0px 0px 0px 2px #D4D4D5 inset !important;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.inverted.black.buttons .button:hover,
+.react-chatbot-ui.inverted.black.button:hover,
+.react-chatbot-ui.inverted.black.buttons .button:focus,
+.react-chatbot-ui.inverted.black.button:focus,
+.react-chatbot-ui.inverted.black.buttons .button.active,
+.react-chatbot-ui.inverted.black.button.active,
+.react-chatbot-ui.inverted.black.buttons .button:active,
+.react-chatbot-ui.inverted.black.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.inverted.black.buttons .button:hover,
+.react-chatbot-ui.inverted.black.button:hover {
+  background-color: #000000;
+}
+.react-chatbot-ui.inverted.black.buttons .button:focus,
+.react-chatbot-ui.inverted.black.button:focus {
+  background-color: #000000;
+}
+.react-chatbot-ui.inverted.black.buttons .active.button,
+.react-chatbot-ui.inverted.black.active.button {
+  background-color: #000000;
+}
+.react-chatbot-ui.inverted.black.buttons .button:active,
+.react-chatbot-ui.inverted.black.button:active {
+  background-color: #000000;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.black.basic.buttons .button,
+.react-chatbot-ui.inverted.black.buttons .basic.button,
+.react-chatbot-ui.inverted.black.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.black.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.black.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.black.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #000000 inset !important;
+          box-shadow: 0px 0px 0px 2px #000000 inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.black.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.black.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.black.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #000000 inset !important;
+          box-shadow: 0px 0px 0px 2px #000000 inset !important;
+  color: #545454 !important;
+}
+.react-chatbot-ui.inverted.black.basic.buttons .active.button,
+.react-chatbot-ui.inverted.black.buttons .basic.active.button,
+.react-chatbot-ui.inverted.black.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #000000 inset !important;
+          box-shadow: 0px 0px 0px 2px #000000 inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.black.basic.buttons .button:active,
+.react-chatbot-ui.inverted.black.buttons .basic.button:active,
+.react-chatbot-ui.inverted.black.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #000000 inset !important;
+          box-shadow: 0px 0px 0px 2px #000000 inset !important;
+  color: #FFFFFF !important;
+}
+
+/*--- Grey ---*/
+
+.react-chatbot-ui.grey.buttons .button,
+.react-chatbot-ui.grey.button {
+  background-color: #767676;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.grey.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.grey.buttons .button:hover,
+.react-chatbot-ui.grey.button:hover {
+  background-color: #838383;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.grey.buttons .button:focus,
+.react-chatbot-ui.grey.button:focus {
+  background-color: #8a8a8a;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.grey.buttons .button:active,
+.react-chatbot-ui.grey.button:active {
+  background-color: #909090;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.grey.buttons .active.button,
+.react-chatbot-ui.grey.buttons .active.button:active,
+.react-chatbot-ui.grey.active.button,
+.react-chatbot-ui.grey.button .active.button:active {
+  background-color: #696969;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.grey.buttons .button,
+.react-chatbot-ui.basic.grey.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #767676 inset !important;
+          box-shadow: 0px 0px 0px 1px #767676 inset !important;
+  color: #767676 !important;
+}
+.react-chatbot-ui.basic.grey.buttons .button:hover,
+.react-chatbot-ui.basic.grey.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #838383 inset !important;
+          box-shadow: 0px 0px 0px 1px #838383 inset !important;
+  color: #838383 !important;
+}
+.react-chatbot-ui.basic.grey.buttons .button:focus,
+.react-chatbot-ui.basic.grey.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #8a8a8a inset !important;
+          box-shadow: 0px 0px 0px 1px #8a8a8a inset !important;
+  color: #838383 !important;
+}
+.react-chatbot-ui.basic.grey.buttons .active.button,
+.react-chatbot-ui.basic.grey.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #696969 inset !important;
+          box-shadow: 0px 0px 0px 1px #696969 inset !important;
+  color: #909090 !important;
+}
+.react-chatbot-ui.basic.grey.buttons .button:active,
+.react-chatbot-ui.basic.grey.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #909090 inset !important;
+          box-shadow: 0px 0px 0px 1px #909090 inset !important;
+  color: #909090 !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.grey.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.grey.buttons .button,
+.react-chatbot-ui.inverted.grey.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #D4D4D5 inset !important;
+          box-shadow: 0px 0px 0px 2px #D4D4D5 inset !important;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.inverted.grey.buttons .button:hover,
+.react-chatbot-ui.inverted.grey.button:hover,
+.react-chatbot-ui.inverted.grey.buttons .button:focus,
+.react-chatbot-ui.inverted.grey.button:focus,
+.react-chatbot-ui.inverted.grey.buttons .button.active,
+.react-chatbot-ui.inverted.grey.button.active,
+.react-chatbot-ui.inverted.grey.buttons .button:active,
+.react-chatbot-ui.inverted.grey.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: rgba(0, 0, 0, 0.6);
+}
+.react-chatbot-ui.inverted.grey.buttons .button:hover,
+.react-chatbot-ui.inverted.grey.button:hover {
+  background-color: #cfd0d2;
+}
+.react-chatbot-ui.inverted.grey.buttons .button:focus,
+.react-chatbot-ui.inverted.grey.button:focus {
+  background-color: #c7c9cb;
+}
+.react-chatbot-ui.inverted.grey.buttons .active.button,
+.react-chatbot-ui.inverted.grey.active.button {
+  background-color: #cfd0d2;
+}
+.react-chatbot-ui.inverted.grey.buttons .button:active,
+.react-chatbot-ui.inverted.grey.button:active {
+  background-color: #c2c4c5;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.grey.basic.buttons .button,
+.react-chatbot-ui.inverted.grey.buttons .basic.button,
+.react-chatbot-ui.inverted.grey.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.grey.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.grey.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.grey.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #cfd0d2 inset !important;
+          box-shadow: 0px 0px 0px 2px #cfd0d2 inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.grey.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.grey.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.grey.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #c7c9cb inset !important;
+          box-shadow: 0px 0px 0px 2px #c7c9cb inset !important;
+  color: #DCDDDE !important;
+}
+.react-chatbot-ui.inverted.grey.basic.buttons .active.button,
+.react-chatbot-ui.inverted.grey.buttons .basic.active.button,
+.react-chatbot-ui.inverted.grey.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #cfd0d2 inset !important;
+          box-shadow: 0px 0px 0px 2px #cfd0d2 inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.grey.basic.buttons .button:active,
+.react-chatbot-ui.inverted.grey.buttons .basic.button:active,
+.react-chatbot-ui.inverted.grey.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #c2c4c5 inset !important;
+          box-shadow: 0px 0px 0px 2px #c2c4c5 inset !important;
+  color: #FFFFFF !important;
+}
+
+/*--- Brown ---*/
+
+.react-chatbot-ui.brown.buttons .button,
+.react-chatbot-ui.brown.button {
+  background-color: #A5673F;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.brown.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.brown.buttons .button:hover,
+.react-chatbot-ui.brown.button:hover {
+  background-color: #975b33;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.brown.buttons .button:focus,
+.react-chatbot-ui.brown.button:focus {
+  background-color: #90532b;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.brown.buttons .button:active,
+.react-chatbot-ui.brown.button:active {
+  background-color: #805031;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.brown.buttons .active.button,
+.react-chatbot-ui.brown.buttons .active.button:active,
+.react-chatbot-ui.brown.active.button,
+.react-chatbot-ui.brown.button .active.button:active {
+  background-color: #995a31;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.brown.buttons .button,
+.react-chatbot-ui.basic.brown.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #A5673F inset !important;
+          box-shadow: 0px 0px 0px 1px #A5673F inset !important;
+  color: #A5673F !important;
+}
+.react-chatbot-ui.basic.brown.buttons .button:hover,
+.react-chatbot-ui.basic.brown.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #975b33 inset !important;
+          box-shadow: 0px 0px 0px 1px #975b33 inset !important;
+  color: #975b33 !important;
+}
+.react-chatbot-ui.basic.brown.buttons .button:focus,
+.react-chatbot-ui.basic.brown.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #90532b inset !important;
+          box-shadow: 0px 0px 0px 1px #90532b inset !important;
+  color: #975b33 !important;
+}
+.react-chatbot-ui.basic.brown.buttons .active.button,
+.react-chatbot-ui.basic.brown.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #995a31 inset !important;
+          box-shadow: 0px 0px 0px 1px #995a31 inset !important;
+  color: #805031 !important;
+}
+.react-chatbot-ui.basic.brown.buttons .button:active,
+.react-chatbot-ui.basic.brown.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #805031 inset !important;
+          box-shadow: 0px 0px 0px 1px #805031 inset !important;
+  color: #805031 !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.brown.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.brown.buttons .button,
+.react-chatbot-ui.inverted.brown.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #D67C1C inset !important;
+          box-shadow: 0px 0px 0px 2px #D67C1C inset !important;
+  color: #D67C1C;
+}
+.react-chatbot-ui.inverted.brown.buttons .button:hover,
+.react-chatbot-ui.inverted.brown.button:hover,
+.react-chatbot-ui.inverted.brown.buttons .button:focus,
+.react-chatbot-ui.inverted.brown.button:focus,
+.react-chatbot-ui.inverted.brown.buttons .button.active,
+.react-chatbot-ui.inverted.brown.button.active,
+.react-chatbot-ui.inverted.brown.buttons .button:active,
+.react-chatbot-ui.inverted.brown.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.inverted.brown.buttons .button:hover,
+.react-chatbot-ui.inverted.brown.button:hover {
+  background-color: #c86f11;
+}
+.react-chatbot-ui.inverted.brown.buttons .button:focus,
+.react-chatbot-ui.inverted.brown.button:focus {
+  background-color: #c16808;
+}
+.react-chatbot-ui.inverted.brown.buttons .active.button,
+.react-chatbot-ui.inverted.brown.active.button {
+  background-color: #cc6f0d;
+}
+.react-chatbot-ui.inverted.brown.buttons .button:active,
+.react-chatbot-ui.inverted.brown.button:active {
+  background-color: #a96216;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.brown.basic.buttons .button,
+.react-chatbot-ui.inverted.brown.buttons .basic.button,
+.react-chatbot-ui.inverted.brown.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.brown.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.brown.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.brown.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #c86f11 inset !important;
+          box-shadow: 0px 0px 0px 2px #c86f11 inset !important;
+  color: #D67C1C !important;
+}
+.react-chatbot-ui.inverted.brown.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.brown.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.brown.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #c16808 inset !important;
+          box-shadow: 0px 0px 0px 2px #c16808 inset !important;
+  color: #D67C1C !important;
+}
+.react-chatbot-ui.inverted.brown.basic.buttons .active.button,
+.react-chatbot-ui.inverted.brown.buttons .basic.active.button,
+.react-chatbot-ui.inverted.brown.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #cc6f0d inset !important;
+          box-shadow: 0px 0px 0px 2px #cc6f0d inset !important;
+  color: #D67C1C !important;
+}
+.react-chatbot-ui.inverted.brown.basic.buttons .button:active,
+.react-chatbot-ui.inverted.brown.buttons .basic.button:active,
+.react-chatbot-ui.inverted.brown.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #a96216 inset !important;
+          box-shadow: 0px 0px 0px 2px #a96216 inset !important;
+  color: #D67C1C !important;
+}
+
+/*--- Blue ---*/
+
+.react-chatbot-ui.blue.buttons .button,
+.react-chatbot-ui.blue.button {
+  background-color: #2185D0;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.blue.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.blue.buttons .button:hover,
+.react-chatbot-ui.blue.button:hover {
+  background-color: #1678c2;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.blue.buttons .button:focus,
+.react-chatbot-ui.blue.button:focus {
+  background-color: #0d71bb;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.blue.buttons .button:active,
+.react-chatbot-ui.blue.button:active {
+  background-color: #1a69a4;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.blue.buttons .active.button,
+.react-chatbot-ui.blue.buttons .active.button:active,
+.react-chatbot-ui.blue.active.button,
+.react-chatbot-ui.blue.button .active.button:active {
+  background-color: #1279c6;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.blue.buttons .button,
+.react-chatbot-ui.basic.blue.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #2185D0 inset !important;
+          box-shadow: 0px 0px 0px 1px #2185D0 inset !important;
+  color: #2185D0 !important;
+}
+.react-chatbot-ui.basic.blue.buttons .button:hover,
+.react-chatbot-ui.basic.blue.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #1678c2 inset !important;
+          box-shadow: 0px 0px 0px 1px #1678c2 inset !important;
+  color: #1678c2 !important;
+}
+.react-chatbot-ui.basic.blue.buttons .button:focus,
+.react-chatbot-ui.basic.blue.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #0d71bb inset !important;
+          box-shadow: 0px 0px 0px 1px #0d71bb inset !important;
+  color: #1678c2 !important;
+}
+.react-chatbot-ui.basic.blue.buttons .active.button,
+.react-chatbot-ui.basic.blue.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #1279c6 inset !important;
+          box-shadow: 0px 0px 0px 1px #1279c6 inset !important;
+  color: #1a69a4 !important;
+}
+.react-chatbot-ui.basic.blue.buttons .button:active,
+.react-chatbot-ui.basic.blue.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #1a69a4 inset !important;
+          box-shadow: 0px 0px 0px 1px #1a69a4 inset !important;
+  color: #1a69a4 !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.blue.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.blue.buttons .button,
+.react-chatbot-ui.inverted.blue.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #54C8FF inset !important;
+          box-shadow: 0px 0px 0px 2px #54C8FF inset !important;
+  color: #54C8FF;
+}
+.react-chatbot-ui.inverted.blue.buttons .button:hover,
+.react-chatbot-ui.inverted.blue.button:hover,
+.react-chatbot-ui.inverted.blue.buttons .button:focus,
+.react-chatbot-ui.inverted.blue.button:focus,
+.react-chatbot-ui.inverted.blue.buttons .button.active,
+.react-chatbot-ui.inverted.blue.button.active,
+.react-chatbot-ui.inverted.blue.buttons .button:active,
+.react-chatbot-ui.inverted.blue.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.inverted.blue.buttons .button:hover,
+.react-chatbot-ui.inverted.blue.button:hover {
+  background-color: #3ac0ff;
+}
+.react-chatbot-ui.inverted.blue.buttons .button:focus,
+.react-chatbot-ui.inverted.blue.button:focus {
+  background-color: #2bbbff;
+}
+.react-chatbot-ui.inverted.blue.buttons .active.button,
+.react-chatbot-ui.inverted.blue.active.button {
+  background-color: #3ac0ff;
+}
+.react-chatbot-ui.inverted.blue.buttons .button:active,
+.react-chatbot-ui.inverted.blue.button:active {
+  background-color: #21b8ff;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.blue.basic.buttons .button,
+.react-chatbot-ui.inverted.blue.buttons .basic.button,
+.react-chatbot-ui.inverted.blue.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.blue.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.blue.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.blue.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #3ac0ff inset !important;
+          box-shadow: 0px 0px 0px 2px #3ac0ff inset !important;
+  color: #54C8FF !important;
+}
+.react-chatbot-ui.inverted.blue.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.blue.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.blue.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #2bbbff inset !important;
+          box-shadow: 0px 0px 0px 2px #2bbbff inset !important;
+  color: #54C8FF !important;
+}
+.react-chatbot-ui.inverted.blue.basic.buttons .active.button,
+.react-chatbot-ui.inverted.blue.buttons .basic.active.button,
+.react-chatbot-ui.inverted.blue.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #3ac0ff inset !important;
+          box-shadow: 0px 0px 0px 2px #3ac0ff inset !important;
+  color: #54C8FF !important;
+}
+.react-chatbot-ui.inverted.blue.basic.buttons .button:active,
+.react-chatbot-ui.inverted.blue.buttons .basic.button:active,
+.react-chatbot-ui.inverted.blue.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #21b8ff inset !important;
+          box-shadow: 0px 0px 0px 2px #21b8ff inset !important;
+  color: #54C8FF !important;
+}
+
+/*--- Green ---*/
+
+.react-chatbot-ui.green.buttons .button,
+.react-chatbot-ui.green.button {
+  background-color: #21BA45;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.green.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.green.buttons .button:hover,
+.react-chatbot-ui.green.button:hover {
+  background-color: #16ab39;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.green.buttons .button:focus,
+.react-chatbot-ui.green.button:focus {
+  background-color: #0ea432;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.green.buttons .button:active,
+.react-chatbot-ui.green.button:active {
+  background-color: #198f35;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.green.buttons .active.button,
+.react-chatbot-ui.green.buttons .active.button:active,
+.react-chatbot-ui.green.active.button,
+.react-chatbot-ui.green.button .active.button:active {
+  background-color: #13ae38;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.green.buttons .button,
+.react-chatbot-ui.basic.green.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #21BA45 inset !important;
+          box-shadow: 0px 0px 0px 1px #21BA45 inset !important;
+  color: #21BA45 !important;
+}
+.react-chatbot-ui.basic.green.buttons .button:hover,
+.react-chatbot-ui.basic.green.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #16ab39 inset !important;
+          box-shadow: 0px 0px 0px 1px #16ab39 inset !important;
+  color: #16ab39 !important;
+}
+.react-chatbot-ui.basic.green.buttons .button:focus,
+.react-chatbot-ui.basic.green.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #0ea432 inset !important;
+          box-shadow: 0px 0px 0px 1px #0ea432 inset !important;
+  color: #16ab39 !important;
+}
+.react-chatbot-ui.basic.green.buttons .active.button,
+.react-chatbot-ui.basic.green.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #13ae38 inset !important;
+          box-shadow: 0px 0px 0px 1px #13ae38 inset !important;
+  color: #198f35 !important;
+}
+.react-chatbot-ui.basic.green.buttons .button:active,
+.react-chatbot-ui.basic.green.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #198f35 inset !important;
+          box-shadow: 0px 0px 0px 1px #198f35 inset !important;
+  color: #198f35 !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.green.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.green.buttons .button,
+.react-chatbot-ui.inverted.green.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #2ECC40 inset !important;
+          box-shadow: 0px 0px 0px 2px #2ECC40 inset !important;
+  color: #2ECC40;
+}
+.react-chatbot-ui.inverted.green.buttons .button:hover,
+.react-chatbot-ui.inverted.green.button:hover,
+.react-chatbot-ui.inverted.green.buttons .button:focus,
+.react-chatbot-ui.inverted.green.button:focus,
+.react-chatbot-ui.inverted.green.buttons .button.active,
+.react-chatbot-ui.inverted.green.button.active,
+.react-chatbot-ui.inverted.green.buttons .button:active,
+.react-chatbot-ui.inverted.green.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.inverted.green.buttons .button:hover,
+.react-chatbot-ui.inverted.green.button:hover {
+  background-color: #22be34;
+}
+.react-chatbot-ui.inverted.green.buttons .button:focus,
+.react-chatbot-ui.inverted.green.button:focus {
+  background-color: #19b82b;
+}
+.react-chatbot-ui.inverted.green.buttons .active.button,
+.react-chatbot-ui.inverted.green.active.button {
+  background-color: #1fc231;
+}
+.react-chatbot-ui.inverted.green.buttons .button:active,
+.react-chatbot-ui.inverted.green.button:active {
+  background-color: #25a233;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.green.basic.buttons .button,
+.react-chatbot-ui.inverted.green.buttons .basic.button,
+.react-chatbot-ui.inverted.green.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.green.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.green.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.green.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #22be34 inset !important;
+          box-shadow: 0px 0px 0px 2px #22be34 inset !important;
+  color: #2ECC40 !important;
+}
+.react-chatbot-ui.inverted.green.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.green.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.green.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #19b82b inset !important;
+          box-shadow: 0px 0px 0px 2px #19b82b inset !important;
+  color: #2ECC40 !important;
+}
+.react-chatbot-ui.inverted.green.basic.buttons .active.button,
+.react-chatbot-ui.inverted.green.buttons .basic.active.button,
+.react-chatbot-ui.inverted.green.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #1fc231 inset !important;
+          box-shadow: 0px 0px 0px 2px #1fc231 inset !important;
+  color: #2ECC40 !important;
+}
+.react-chatbot-ui.inverted.green.basic.buttons .button:active,
+.react-chatbot-ui.inverted.green.buttons .basic.button:active,
+.react-chatbot-ui.inverted.green.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #25a233 inset !important;
+          box-shadow: 0px 0px 0px 2px #25a233 inset !important;
+  color: #2ECC40 !important;
+}
+
+/*--- Orange ---*/
+
+.react-chatbot-ui.orange.buttons .button,
+.react-chatbot-ui.orange.button {
+  background-color: #F2711C;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.orange.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.orange.buttons .button:hover,
+.react-chatbot-ui.orange.button:hover {
+  background-color: #f26202;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.orange.buttons .button:focus,
+.react-chatbot-ui.orange.button:focus {
+  background-color: #e55b00;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.orange.buttons .button:active,
+.react-chatbot-ui.orange.button:active {
+  background-color: #cf590c;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.orange.buttons .active.button,
+.react-chatbot-ui.orange.buttons .active.button:active,
+.react-chatbot-ui.orange.active.button,
+.react-chatbot-ui.orange.button .active.button:active {
+  background-color: #f56100;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.orange.buttons .button,
+.react-chatbot-ui.basic.orange.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #F2711C inset !important;
+          box-shadow: 0px 0px 0px 1px #F2711C inset !important;
+  color: #F2711C !important;
+}
+.react-chatbot-ui.basic.orange.buttons .button:hover,
+.react-chatbot-ui.basic.orange.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #f26202 inset !important;
+          box-shadow: 0px 0px 0px 1px #f26202 inset !important;
+  color: #f26202 !important;
+}
+.react-chatbot-ui.basic.orange.buttons .button:focus,
+.react-chatbot-ui.basic.orange.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #e55b00 inset !important;
+          box-shadow: 0px 0px 0px 1px #e55b00 inset !important;
+  color: #f26202 !important;
+}
+.react-chatbot-ui.basic.orange.buttons .active.button,
+.react-chatbot-ui.basic.orange.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #f56100 inset !important;
+          box-shadow: 0px 0px 0px 1px #f56100 inset !important;
+  color: #cf590c !important;
+}
+.react-chatbot-ui.basic.orange.buttons .button:active,
+.react-chatbot-ui.basic.orange.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #cf590c inset !important;
+          box-shadow: 0px 0px 0px 1px #cf590c inset !important;
+  color: #cf590c !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.orange.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.orange.buttons .button,
+.react-chatbot-ui.inverted.orange.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #FF851B inset !important;
+          box-shadow: 0px 0px 0px 2px #FF851B inset !important;
+  color: #FF851B;
+}
+.react-chatbot-ui.inverted.orange.buttons .button:hover,
+.react-chatbot-ui.inverted.orange.button:hover,
+.react-chatbot-ui.inverted.orange.buttons .button:focus,
+.react-chatbot-ui.inverted.orange.button:focus,
+.react-chatbot-ui.inverted.orange.buttons .button.active,
+.react-chatbot-ui.inverted.orange.button.active,
+.react-chatbot-ui.inverted.orange.buttons .button:active,
+.react-chatbot-ui.inverted.orange.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.inverted.orange.buttons .button:hover,
+.react-chatbot-ui.inverted.orange.button:hover {
+  background-color: #ff7701;
+}
+.react-chatbot-ui.inverted.orange.buttons .button:focus,
+.react-chatbot-ui.inverted.orange.button:focus {
+  background-color: #f17000;
+}
+.react-chatbot-ui.inverted.orange.buttons .active.button,
+.react-chatbot-ui.inverted.orange.active.button {
+  background-color: #ff7701;
+}
+.react-chatbot-ui.inverted.orange.buttons .button:active,
+.react-chatbot-ui.inverted.orange.button:active {
+  background-color: #e76b00;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.orange.basic.buttons .button,
+.react-chatbot-ui.inverted.orange.buttons .basic.button,
+.react-chatbot-ui.inverted.orange.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.orange.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.orange.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.orange.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #ff7701 inset !important;
+          box-shadow: 0px 0px 0px 2px #ff7701 inset !important;
+  color: #FF851B !important;
+}
+.react-chatbot-ui.inverted.orange.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.orange.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.orange.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #f17000 inset !important;
+          box-shadow: 0px 0px 0px 2px #f17000 inset !important;
+  color: #FF851B !important;
+}
+.react-chatbot-ui.inverted.orange.basic.buttons .active.button,
+.react-chatbot-ui.inverted.orange.buttons .basic.active.button,
+.react-chatbot-ui.inverted.orange.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #ff7701 inset !important;
+          box-shadow: 0px 0px 0px 2px #ff7701 inset !important;
+  color: #FF851B !important;
+}
+.react-chatbot-ui.inverted.orange.basic.buttons .button:active,
+.react-chatbot-ui.inverted.orange.buttons .basic.button:active,
+.react-chatbot-ui.inverted.orange.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #e76b00 inset !important;
+          box-shadow: 0px 0px 0px 2px #e76b00 inset !important;
+  color: #FF851B !important;
+}
+
+/*--- Pink ---*/
+
+.react-chatbot-ui.pink.buttons .button,
+.react-chatbot-ui.pink.button {
+  background-color: #E03997;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.pink.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.pink.buttons .button:hover,
+.react-chatbot-ui.pink.button:hover {
+  background-color: #e61a8d;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.pink.buttons .button:focus,
+.react-chatbot-ui.pink.button:focus {
+  background-color: #e10f85;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.pink.buttons .button:active,
+.react-chatbot-ui.pink.button:active {
+  background-color: #c71f7e;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.pink.buttons .active.button,
+.react-chatbot-ui.pink.buttons .active.button:active,
+.react-chatbot-ui.pink.active.button,
+.react-chatbot-ui.pink.button .active.button:active {
+  background-color: #ea158d;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.pink.buttons .button,
+.react-chatbot-ui.basic.pink.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #E03997 inset !important;
+          box-shadow: 0px 0px 0px 1px #E03997 inset !important;
+  color: #E03997 !important;
+}
+.react-chatbot-ui.basic.pink.buttons .button:hover,
+.react-chatbot-ui.basic.pink.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #e61a8d inset !important;
+          box-shadow: 0px 0px 0px 1px #e61a8d inset !important;
+  color: #e61a8d !important;
+}
+.react-chatbot-ui.basic.pink.buttons .button:focus,
+.react-chatbot-ui.basic.pink.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #e10f85 inset !important;
+          box-shadow: 0px 0px 0px 1px #e10f85 inset !important;
+  color: #e61a8d !important;
+}
+.react-chatbot-ui.basic.pink.buttons .active.button,
+.react-chatbot-ui.basic.pink.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #ea158d inset !important;
+          box-shadow: 0px 0px 0px 1px #ea158d inset !important;
+  color: #c71f7e !important;
+}
+.react-chatbot-ui.basic.pink.buttons .button:active,
+.react-chatbot-ui.basic.pink.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #c71f7e inset !important;
+          box-shadow: 0px 0px 0px 1px #c71f7e inset !important;
+  color: #c71f7e !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.pink.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.pink.buttons .button,
+.react-chatbot-ui.inverted.pink.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #FF8EDF inset !important;
+          box-shadow: 0px 0px 0px 2px #FF8EDF inset !important;
+  color: #FF8EDF;
+}
+.react-chatbot-ui.inverted.pink.buttons .button:hover,
+.react-chatbot-ui.inverted.pink.button:hover,
+.react-chatbot-ui.inverted.pink.buttons .button:focus,
+.react-chatbot-ui.inverted.pink.button:focus,
+.react-chatbot-ui.inverted.pink.buttons .button.active,
+.react-chatbot-ui.inverted.pink.button.active,
+.react-chatbot-ui.inverted.pink.buttons .button:active,
+.react-chatbot-ui.inverted.pink.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.inverted.pink.buttons .button:hover,
+.react-chatbot-ui.inverted.pink.button:hover {
+  background-color: #ff74d8;
+}
+.react-chatbot-ui.inverted.pink.buttons .button:focus,
+.react-chatbot-ui.inverted.pink.button:focus {
+  background-color: #ff65d3;
+}
+.react-chatbot-ui.inverted.pink.buttons .active.button,
+.react-chatbot-ui.inverted.pink.active.button {
+  background-color: #ff74d8;
+}
+.react-chatbot-ui.inverted.pink.buttons .button:active,
+.react-chatbot-ui.inverted.pink.button:active {
+  background-color: #ff5bd1;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.pink.basic.buttons .button,
+.react-chatbot-ui.inverted.pink.buttons .basic.button,
+.react-chatbot-ui.inverted.pink.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.pink.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.pink.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.pink.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #ff74d8 inset !important;
+          box-shadow: 0px 0px 0px 2px #ff74d8 inset !important;
+  color: #FF8EDF !important;
+}
+.react-chatbot-ui.inverted.pink.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.pink.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.pink.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #ff65d3 inset !important;
+          box-shadow: 0px 0px 0px 2px #ff65d3 inset !important;
+  color: #FF8EDF !important;
+}
+.react-chatbot-ui.inverted.pink.basic.buttons .active.button,
+.react-chatbot-ui.inverted.pink.buttons .basic.active.button,
+.react-chatbot-ui.inverted.pink.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #ff74d8 inset !important;
+          box-shadow: 0px 0px 0px 2px #ff74d8 inset !important;
+  color: #FF8EDF !important;
+}
+.react-chatbot-ui.inverted.pink.basic.buttons .button:active,
+.react-chatbot-ui.inverted.pink.buttons .basic.button:active,
+.react-chatbot-ui.inverted.pink.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #ff5bd1 inset !important;
+          box-shadow: 0px 0px 0px 2px #ff5bd1 inset !important;
+  color: #FF8EDF !important;
+}
+
+/*--- Violet ---*/
+
+.react-chatbot-ui.violet.buttons .button,
+.react-chatbot-ui.violet.button {
+  background-color: #6435C9;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.violet.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.violet.buttons .button:hover,
+.react-chatbot-ui.violet.button:hover {
+  background-color: #5829bb;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.violet.buttons .button:focus,
+.react-chatbot-ui.violet.button:focus {
+  background-color: #4f20b5;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.violet.buttons .button:active,
+.react-chatbot-ui.violet.button:active {
+  background-color: #502aa1;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.violet.buttons .active.button,
+.react-chatbot-ui.violet.buttons .active.button:active,
+.react-chatbot-ui.violet.active.button,
+.react-chatbot-ui.violet.button .active.button:active {
+  background-color: #5626bf;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.violet.buttons .button,
+.react-chatbot-ui.basic.violet.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #6435C9 inset !important;
+          box-shadow: 0px 0px 0px 1px #6435C9 inset !important;
+  color: #6435C9 !important;
+}
+.react-chatbot-ui.basic.violet.buttons .button:hover,
+.react-chatbot-ui.basic.violet.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #5829bb inset !important;
+          box-shadow: 0px 0px 0px 1px #5829bb inset !important;
+  color: #5829bb !important;
+}
+.react-chatbot-ui.basic.violet.buttons .button:focus,
+.react-chatbot-ui.basic.violet.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #4f20b5 inset !important;
+          box-shadow: 0px 0px 0px 1px #4f20b5 inset !important;
+  color: #5829bb !important;
+}
+.react-chatbot-ui.basic.violet.buttons .active.button,
+.react-chatbot-ui.basic.violet.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #5626bf inset !important;
+          box-shadow: 0px 0px 0px 1px #5626bf inset !important;
+  color: #502aa1 !important;
+}
+.react-chatbot-ui.basic.violet.buttons .button:active,
+.react-chatbot-ui.basic.violet.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #502aa1 inset !important;
+          box-shadow: 0px 0px 0px 1px #502aa1 inset !important;
+  color: #502aa1 !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.violet.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.violet.buttons .button,
+.react-chatbot-ui.inverted.violet.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #A291FB inset !important;
+          box-shadow: 0px 0px 0px 2px #A291FB inset !important;
+  color: #A291FB;
+}
+.react-chatbot-ui.inverted.violet.buttons .button:hover,
+.react-chatbot-ui.inverted.violet.button:hover,
+.react-chatbot-ui.inverted.violet.buttons .button:focus,
+.react-chatbot-ui.inverted.violet.button:focus,
+.react-chatbot-ui.inverted.violet.buttons .button.active,
+.react-chatbot-ui.inverted.violet.button.active,
+.react-chatbot-ui.inverted.violet.buttons .button:active,
+.react-chatbot-ui.inverted.violet.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.inverted.violet.buttons .button:hover,
+.react-chatbot-ui.inverted.violet.button:hover {
+  background-color: #8a73ff;
+}
+.react-chatbot-ui.inverted.violet.buttons .button:focus,
+.react-chatbot-ui.inverted.violet.button:focus {
+  background-color: #7d64ff;
+}
+.react-chatbot-ui.inverted.violet.buttons .active.button,
+.react-chatbot-ui.inverted.violet.active.button {
+  background-color: #8a73ff;
+}
+.react-chatbot-ui.inverted.violet.buttons .button:active,
+.react-chatbot-ui.inverted.violet.button:active {
+  background-color: #7860f9;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.violet.basic.buttons .button,
+.react-chatbot-ui.inverted.violet.buttons .basic.button,
+.react-chatbot-ui.inverted.violet.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.violet.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.violet.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.violet.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #8a73ff inset !important;
+          box-shadow: 0px 0px 0px 2px #8a73ff inset !important;
+  color: #A291FB !important;
+}
+.react-chatbot-ui.inverted.violet.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.violet.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.violet.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #7d64ff inset !important;
+          box-shadow: 0px 0px 0px 2px #7d64ff inset !important;
+  color: #A291FB !important;
+}
+.react-chatbot-ui.inverted.violet.basic.buttons .active.button,
+.react-chatbot-ui.inverted.violet.buttons .basic.active.button,
+.react-chatbot-ui.inverted.violet.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #8a73ff inset !important;
+          box-shadow: 0px 0px 0px 2px #8a73ff inset !important;
+  color: #A291FB !important;
+}
+.react-chatbot-ui.inverted.violet.basic.buttons .button:active,
+.react-chatbot-ui.inverted.violet.buttons .basic.button:active,
+.react-chatbot-ui.inverted.violet.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #7860f9 inset !important;
+          box-shadow: 0px 0px 0px 2px #7860f9 inset !important;
+  color: #A291FB !important;
+}
+
+/*--- Purple ---*/
+
+.react-chatbot-ui.purple.buttons .button,
+.react-chatbot-ui.purple.button {
+  background-color: #A333C8;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.purple.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.purple.buttons .button:hover,
+.react-chatbot-ui.purple.button:hover {
+  background-color: #9627ba;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.purple.buttons .button:focus,
+.react-chatbot-ui.purple.button:focus {
+  background-color: #8f1eb4;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.purple.buttons .button:active,
+.react-chatbot-ui.purple.button:active {
+  background-color: #82299f;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.purple.buttons .active.button,
+.react-chatbot-ui.purple.buttons .active.button:active,
+.react-chatbot-ui.purple.active.button,
+.react-chatbot-ui.purple.button .active.button:active {
+  background-color: #9724be;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.purple.buttons .button,
+.react-chatbot-ui.basic.purple.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #A333C8 inset !important;
+          box-shadow: 0px 0px 0px 1px #A333C8 inset !important;
+  color: #A333C8 !important;
+}
+.react-chatbot-ui.basic.purple.buttons .button:hover,
+.react-chatbot-ui.basic.purple.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #9627ba inset !important;
+          box-shadow: 0px 0px 0px 1px #9627ba inset !important;
+  color: #9627ba !important;
+}
+.react-chatbot-ui.basic.purple.buttons .button:focus,
+.react-chatbot-ui.basic.purple.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #8f1eb4 inset !important;
+          box-shadow: 0px 0px 0px 1px #8f1eb4 inset !important;
+  color: #9627ba !important;
+}
+.react-chatbot-ui.basic.purple.buttons .active.button,
+.react-chatbot-ui.basic.purple.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #9724be inset !important;
+          box-shadow: 0px 0px 0px 1px #9724be inset !important;
+  color: #82299f !important;
+}
+.react-chatbot-ui.basic.purple.buttons .button:active,
+.react-chatbot-ui.basic.purple.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #82299f inset !important;
+          box-shadow: 0px 0px 0px 1px #82299f inset !important;
+  color: #82299f !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.purple.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.purple.buttons .button,
+.react-chatbot-ui.inverted.purple.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #DC73FF inset !important;
+          box-shadow: 0px 0px 0px 2px #DC73FF inset !important;
+  color: #DC73FF;
+}
+.react-chatbot-ui.inverted.purple.buttons .button:hover,
+.react-chatbot-ui.inverted.purple.button:hover,
+.react-chatbot-ui.inverted.purple.buttons .button:focus,
+.react-chatbot-ui.inverted.purple.button:focus,
+.react-chatbot-ui.inverted.purple.buttons .button.active,
+.react-chatbot-ui.inverted.purple.button.active,
+.react-chatbot-ui.inverted.purple.buttons .button:active,
+.react-chatbot-ui.inverted.purple.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.inverted.purple.buttons .button:hover,
+.react-chatbot-ui.inverted.purple.button:hover {
+  background-color: #d65aff;
+}
+.react-chatbot-ui.inverted.purple.buttons .button:focus,
+.react-chatbot-ui.inverted.purple.button:focus {
+  background-color: #d24aff;
+}
+.react-chatbot-ui.inverted.purple.buttons .active.button,
+.react-chatbot-ui.inverted.purple.active.button {
+  background-color: #d65aff;
+}
+.react-chatbot-ui.inverted.purple.buttons .button:active,
+.react-chatbot-ui.inverted.purple.button:active {
+  background-color: #cf40ff;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.purple.basic.buttons .button,
+.react-chatbot-ui.inverted.purple.buttons .basic.button,
+.react-chatbot-ui.inverted.purple.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.purple.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.purple.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.purple.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #d65aff inset !important;
+          box-shadow: 0px 0px 0px 2px #d65aff inset !important;
+  color: #DC73FF !important;
+}
+.react-chatbot-ui.inverted.purple.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.purple.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.purple.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #d24aff inset !important;
+          box-shadow: 0px 0px 0px 2px #d24aff inset !important;
+  color: #DC73FF !important;
+}
+.react-chatbot-ui.inverted.purple.basic.buttons .active.button,
+.react-chatbot-ui.inverted.purple.buttons .basic.active.button,
+.react-chatbot-ui.inverted.purple.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #d65aff inset !important;
+          box-shadow: 0px 0px 0px 2px #d65aff inset !important;
+  color: #DC73FF !important;
+}
+.react-chatbot-ui.inverted.purple.basic.buttons .button:active,
+.react-chatbot-ui.inverted.purple.buttons .basic.button:active,
+.react-chatbot-ui.inverted.purple.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #cf40ff inset !important;
+          box-shadow: 0px 0px 0px 2px #cf40ff inset !important;
+  color: #DC73FF !important;
+}
+
+/*--- Red ---*/
+
+.react-chatbot-ui.red.buttons .button,
+.react-chatbot-ui.red.button {
+  background-color: #DB2828;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.red.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.red.buttons .button:hover,
+.react-chatbot-ui.red.button:hover {
+  background-color: #d01919;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.red.buttons .button:focus,
+.react-chatbot-ui.red.button:focus {
+  background-color: #ca1010;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.red.buttons .button:active,
+.react-chatbot-ui.red.button:active {
+  background-color: #b21e1e;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.red.buttons .active.button,
+.react-chatbot-ui.red.buttons .active.button:active,
+.react-chatbot-ui.red.active.button,
+.react-chatbot-ui.red.button .active.button:active {
+  background-color: #d41515;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.red.buttons .button,
+.react-chatbot-ui.basic.red.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #DB2828 inset !important;
+          box-shadow: 0px 0px 0px 1px #DB2828 inset !important;
+  color: #DB2828 !important;
+}
+.react-chatbot-ui.basic.red.buttons .button:hover,
+.react-chatbot-ui.basic.red.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #d01919 inset !important;
+          box-shadow: 0px 0px 0px 1px #d01919 inset !important;
+  color: #d01919 !important;
+}
+.react-chatbot-ui.basic.red.buttons .button:focus,
+.react-chatbot-ui.basic.red.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #ca1010 inset !important;
+          box-shadow: 0px 0px 0px 1px #ca1010 inset !important;
+  color: #d01919 !important;
+}
+.react-chatbot-ui.basic.red.buttons .active.button,
+.react-chatbot-ui.basic.red.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #d41515 inset !important;
+          box-shadow: 0px 0px 0px 1px #d41515 inset !important;
+  color: #b21e1e !important;
+}
+.react-chatbot-ui.basic.red.buttons .button:active,
+.react-chatbot-ui.basic.red.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #b21e1e inset !important;
+          box-shadow: 0px 0px 0px 1px #b21e1e inset !important;
+  color: #b21e1e !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.red.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.red.buttons .button,
+.react-chatbot-ui.inverted.red.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #FF695E inset !important;
+          box-shadow: 0px 0px 0px 2px #FF695E inset !important;
+  color: #FF695E;
+}
+.react-chatbot-ui.inverted.red.buttons .button:hover,
+.react-chatbot-ui.inverted.red.button:hover,
+.react-chatbot-ui.inverted.red.buttons .button:focus,
+.react-chatbot-ui.inverted.red.button:focus,
+.react-chatbot-ui.inverted.red.buttons .button.active,
+.react-chatbot-ui.inverted.red.button.active,
+.react-chatbot-ui.inverted.red.buttons .button:active,
+.react-chatbot-ui.inverted.red.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.inverted.red.buttons .button:hover,
+.react-chatbot-ui.inverted.red.button:hover {
+  background-color: #ff5144;
+}
+.react-chatbot-ui.inverted.red.buttons .button:focus,
+.react-chatbot-ui.inverted.red.button:focus {
+  background-color: #ff4335;
+}
+.react-chatbot-ui.inverted.red.buttons .active.button,
+.react-chatbot-ui.inverted.red.active.button {
+  background-color: #ff5144;
+}
+.react-chatbot-ui.inverted.red.buttons .button:active,
+.react-chatbot-ui.inverted.red.button:active {
+  background-color: #ff392b;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.red.basic.buttons .button,
+.react-chatbot-ui.inverted.red.buttons .basic.button,
+.react-chatbot-ui.inverted.red.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.red.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.red.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.red.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #ff5144 inset !important;
+          box-shadow: 0px 0px 0px 2px #ff5144 inset !important;
+  color: #FF695E !important;
+}
+.react-chatbot-ui.inverted.red.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.red.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.red.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #ff4335 inset !important;
+          box-shadow: 0px 0px 0px 2px #ff4335 inset !important;
+  color: #FF695E !important;
+}
+.react-chatbot-ui.inverted.red.basic.buttons .active.button,
+.react-chatbot-ui.inverted.red.buttons .basic.active.button,
+.react-chatbot-ui.inverted.red.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #ff5144 inset !important;
+          box-shadow: 0px 0px 0px 2px #ff5144 inset !important;
+  color: #FF695E !important;
+}
+.react-chatbot-ui.inverted.red.basic.buttons .button:active,
+.react-chatbot-ui.inverted.red.buttons .basic.button:active,
+.react-chatbot-ui.inverted.red.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #ff392b inset !important;
+          box-shadow: 0px 0px 0px 2px #ff392b inset !important;
+  color: #FF695E !important;
+}
+
+/*--- Teal ---*/
+
+.react-chatbot-ui.teal.buttons .button,
+.react-chatbot-ui.teal.button {
+  background-color: #00B5AD;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.teal.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.teal.buttons .button:hover,
+.react-chatbot-ui.teal.button:hover {
+  background-color: #009c95;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.teal.buttons .button:focus,
+.react-chatbot-ui.teal.button:focus {
+  background-color: #008c86;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.teal.buttons .button:active,
+.react-chatbot-ui.teal.button:active {
+  background-color: #00827c;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.teal.buttons .active.button,
+.react-chatbot-ui.teal.buttons .active.button:active,
+.react-chatbot-ui.teal.active.button,
+.react-chatbot-ui.teal.button .active.button:active {
+  background-color: #009c95;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.teal.buttons .button,
+.react-chatbot-ui.basic.teal.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #00B5AD inset !important;
+          box-shadow: 0px 0px 0px 1px #00B5AD inset !important;
+  color: #00B5AD !important;
+}
+.react-chatbot-ui.basic.teal.buttons .button:hover,
+.react-chatbot-ui.basic.teal.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #009c95 inset !important;
+          box-shadow: 0px 0px 0px 1px #009c95 inset !important;
+  color: #009c95 !important;
+}
+.react-chatbot-ui.basic.teal.buttons .button:focus,
+.react-chatbot-ui.basic.teal.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #008c86 inset !important;
+          box-shadow: 0px 0px 0px 1px #008c86 inset !important;
+  color: #009c95 !important;
+}
+.react-chatbot-ui.basic.teal.buttons .active.button,
+.react-chatbot-ui.basic.teal.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #009c95 inset !important;
+          box-shadow: 0px 0px 0px 1px #009c95 inset !important;
+  color: #00827c !important;
+}
+.react-chatbot-ui.basic.teal.buttons .button:active,
+.react-chatbot-ui.basic.teal.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #00827c inset !important;
+          box-shadow: 0px 0px 0px 1px #00827c inset !important;
+  color: #00827c !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.teal.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.teal.buttons .button,
+.react-chatbot-ui.inverted.teal.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #6DFFFF inset !important;
+          box-shadow: 0px 0px 0px 2px #6DFFFF inset !important;
+  color: #6DFFFF;
+}
+.react-chatbot-ui.inverted.teal.buttons .button:hover,
+.react-chatbot-ui.inverted.teal.button:hover,
+.react-chatbot-ui.inverted.teal.buttons .button:focus,
+.react-chatbot-ui.inverted.teal.button:focus,
+.react-chatbot-ui.inverted.teal.buttons .button.active,
+.react-chatbot-ui.inverted.teal.button.active,
+.react-chatbot-ui.inverted.teal.buttons .button:active,
+.react-chatbot-ui.inverted.teal.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: rgba(0, 0, 0, 0.6);
+}
+.react-chatbot-ui.inverted.teal.buttons .button:hover,
+.react-chatbot-ui.inverted.teal.button:hover {
+  background-color: #54ffff;
+}
+.react-chatbot-ui.inverted.teal.buttons .button:focus,
+.react-chatbot-ui.inverted.teal.button:focus {
+  background-color: #44ffff;
+}
+.react-chatbot-ui.inverted.teal.buttons .active.button,
+.react-chatbot-ui.inverted.teal.active.button {
+  background-color: #54ffff;
+}
+.react-chatbot-ui.inverted.teal.buttons .button:active,
+.react-chatbot-ui.inverted.teal.button:active {
+  background-color: #3affff;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.teal.basic.buttons .button,
+.react-chatbot-ui.inverted.teal.buttons .basic.button,
+.react-chatbot-ui.inverted.teal.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.teal.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.teal.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.teal.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #54ffff inset !important;
+          box-shadow: 0px 0px 0px 2px #54ffff inset !important;
+  color: #6DFFFF !important;
+}
+.react-chatbot-ui.inverted.teal.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.teal.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.teal.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #44ffff inset !important;
+          box-shadow: 0px 0px 0px 2px #44ffff inset !important;
+  color: #6DFFFF !important;
+}
+.react-chatbot-ui.inverted.teal.basic.buttons .active.button,
+.react-chatbot-ui.inverted.teal.buttons .basic.active.button,
+.react-chatbot-ui.inverted.teal.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #54ffff inset !important;
+          box-shadow: 0px 0px 0px 2px #54ffff inset !important;
+  color: #6DFFFF !important;
+}
+.react-chatbot-ui.inverted.teal.basic.buttons .button:active,
+.react-chatbot-ui.inverted.teal.buttons .basic.button:active,
+.react-chatbot-ui.inverted.teal.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #3affff inset !important;
+          box-shadow: 0px 0px 0px 2px #3affff inset !important;
+  color: #6DFFFF !important;
+}
+
+/*--- Olive ---*/
+
+.react-chatbot-ui.olive.buttons .button,
+.react-chatbot-ui.olive.button {
+  background-color: #B5CC18;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.olive.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.olive.buttons .button:hover,
+.react-chatbot-ui.olive.button:hover {
+  background-color: #a7bd0d;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.olive.buttons .button:focus,
+.react-chatbot-ui.olive.button:focus {
+  background-color: #a0b605;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.olive.buttons .button:active,
+.react-chatbot-ui.olive.button:active {
+  background-color: #8d9e13;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.olive.buttons .active.button,
+.react-chatbot-ui.olive.buttons .active.button:active,
+.react-chatbot-ui.olive.active.button,
+.react-chatbot-ui.olive.button .active.button:active {
+  background-color: #aac109;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.olive.buttons .button,
+.react-chatbot-ui.basic.olive.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #B5CC18 inset !important;
+          box-shadow: 0px 0px 0px 1px #B5CC18 inset !important;
+  color: #B5CC18 !important;
+}
+.react-chatbot-ui.basic.olive.buttons .button:hover,
+.react-chatbot-ui.basic.olive.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #a7bd0d inset !important;
+          box-shadow: 0px 0px 0px 1px #a7bd0d inset !important;
+  color: #a7bd0d !important;
+}
+.react-chatbot-ui.basic.olive.buttons .button:focus,
+.react-chatbot-ui.basic.olive.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #a0b605 inset !important;
+          box-shadow: 0px 0px 0px 1px #a0b605 inset !important;
+  color: #a7bd0d !important;
+}
+.react-chatbot-ui.basic.olive.buttons .active.button,
+.react-chatbot-ui.basic.olive.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #aac109 inset !important;
+          box-shadow: 0px 0px 0px 1px #aac109 inset !important;
+  color: #8d9e13 !important;
+}
+.react-chatbot-ui.basic.olive.buttons .button:active,
+.react-chatbot-ui.basic.olive.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #8d9e13 inset !important;
+          box-shadow: 0px 0px 0px 1px #8d9e13 inset !important;
+  color: #8d9e13 !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.olive.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.olive.buttons .button,
+.react-chatbot-ui.inverted.olive.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #D9E778 inset !important;
+          box-shadow: 0px 0px 0px 2px #D9E778 inset !important;
+  color: #D9E778;
+}
+.react-chatbot-ui.inverted.olive.buttons .button:hover,
+.react-chatbot-ui.inverted.olive.button:hover,
+.react-chatbot-ui.inverted.olive.buttons .button:focus,
+.react-chatbot-ui.inverted.olive.button:focus,
+.react-chatbot-ui.inverted.olive.buttons .button.active,
+.react-chatbot-ui.inverted.olive.button.active,
+.react-chatbot-ui.inverted.olive.buttons .button:active,
+.react-chatbot-ui.inverted.olive.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: rgba(0, 0, 0, 0.6);
+}
+.react-chatbot-ui.inverted.olive.buttons .button:hover,
+.react-chatbot-ui.inverted.olive.button:hover {
+  background-color: #d8ea5c;
+}
+.react-chatbot-ui.inverted.olive.buttons .button:focus,
+.react-chatbot-ui.inverted.olive.button:focus {
+  background-color: #daef47;
+}
+.react-chatbot-ui.inverted.olive.buttons .active.button,
+.react-chatbot-ui.inverted.olive.active.button {
+  background-color: #daed59;
+}
+.react-chatbot-ui.inverted.olive.buttons .button:active,
+.react-chatbot-ui.inverted.olive.button:active {
+  background-color: #cddf4d;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.olive.basic.buttons .button,
+.react-chatbot-ui.inverted.olive.buttons .basic.button,
+.react-chatbot-ui.inverted.olive.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.olive.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.olive.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.olive.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #d8ea5c inset !important;
+          box-shadow: 0px 0px 0px 2px #d8ea5c inset !important;
+  color: #D9E778 !important;
+}
+.react-chatbot-ui.inverted.olive.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.olive.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.olive.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #daef47 inset !important;
+          box-shadow: 0px 0px 0px 2px #daef47 inset !important;
+  color: #D9E778 !important;
+}
+.react-chatbot-ui.inverted.olive.basic.buttons .active.button,
+.react-chatbot-ui.inverted.olive.buttons .basic.active.button,
+.react-chatbot-ui.inverted.olive.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #daed59 inset !important;
+          box-shadow: 0px 0px 0px 2px #daed59 inset !important;
+  color: #D9E778 !important;
+}
+.react-chatbot-ui.inverted.olive.basic.buttons .button:active,
+.react-chatbot-ui.inverted.olive.buttons .basic.button:active,
+.react-chatbot-ui.inverted.olive.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #cddf4d inset !important;
+          box-shadow: 0px 0px 0px 2px #cddf4d inset !important;
+  color: #D9E778 !important;
+}
+
+/*--- Yellow ---*/
+
+.react-chatbot-ui.yellow.buttons .button,
+.react-chatbot-ui.yellow.button {
+  background-color: #FBBD08;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.yellow.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.yellow.buttons .button:hover,
+.react-chatbot-ui.yellow.button:hover {
+  background-color: #eaae00;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.yellow.buttons .button:focus,
+.react-chatbot-ui.yellow.button:focus {
+  background-color: #daa300;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.yellow.buttons .button:active,
+.react-chatbot-ui.yellow.button:active {
+  background-color: #cd9903;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.yellow.buttons .active.button,
+.react-chatbot-ui.yellow.buttons .active.button:active,
+.react-chatbot-ui.yellow.active.button,
+.react-chatbot-ui.yellow.button .active.button:active {
+  background-color: #eaae00;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.yellow.buttons .button,
+.react-chatbot-ui.basic.yellow.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #FBBD08 inset !important;
+          box-shadow: 0px 0px 0px 1px #FBBD08 inset !important;
+  color: #FBBD08 !important;
+}
+.react-chatbot-ui.basic.yellow.buttons .button:hover,
+.react-chatbot-ui.basic.yellow.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #eaae00 inset !important;
+          box-shadow: 0px 0px 0px 1px #eaae00 inset !important;
+  color: #eaae00 !important;
+}
+.react-chatbot-ui.basic.yellow.buttons .button:focus,
+.react-chatbot-ui.basic.yellow.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #daa300 inset !important;
+          box-shadow: 0px 0px 0px 1px #daa300 inset !important;
+  color: #eaae00 !important;
+}
+.react-chatbot-ui.basic.yellow.buttons .active.button,
+.react-chatbot-ui.basic.yellow.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #eaae00 inset !important;
+          box-shadow: 0px 0px 0px 1px #eaae00 inset !important;
+  color: #cd9903 !important;
+}
+.react-chatbot-ui.basic.yellow.buttons .button:active,
+.react-chatbot-ui.basic.yellow.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #cd9903 inset !important;
+          box-shadow: 0px 0px 0px 1px #cd9903 inset !important;
+  color: #cd9903 !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.yellow.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.yellow.buttons .button,
+.react-chatbot-ui.inverted.yellow.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #FFE21F inset !important;
+          box-shadow: 0px 0px 0px 2px #FFE21F inset !important;
+  color: #FFE21F;
+}
+.react-chatbot-ui.inverted.yellow.buttons .button:hover,
+.react-chatbot-ui.inverted.yellow.button:hover,
+.react-chatbot-ui.inverted.yellow.buttons .button:focus,
+.react-chatbot-ui.inverted.yellow.button:focus,
+.react-chatbot-ui.inverted.yellow.buttons .button.active,
+.react-chatbot-ui.inverted.yellow.button.active,
+.react-chatbot-ui.inverted.yellow.buttons .button:active,
+.react-chatbot-ui.inverted.yellow.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: rgba(0, 0, 0, 0.6);
+}
+.react-chatbot-ui.inverted.yellow.buttons .button:hover,
+.react-chatbot-ui.inverted.yellow.button:hover {
+  background-color: #ffdf05;
+}
+.react-chatbot-ui.inverted.yellow.buttons .button:focus,
+.react-chatbot-ui.inverted.yellow.button:focus {
+  background-color: #f5d500;
+}
+.react-chatbot-ui.inverted.yellow.buttons .active.button,
+.react-chatbot-ui.inverted.yellow.active.button {
+  background-color: #ffdf05;
+}
+.react-chatbot-ui.inverted.yellow.buttons .button:active,
+.react-chatbot-ui.inverted.yellow.button:active {
+  background-color: #ebcd00;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.yellow.basic.buttons .button,
+.react-chatbot-ui.inverted.yellow.buttons .basic.button,
+.react-chatbot-ui.inverted.yellow.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.yellow.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.yellow.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.yellow.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #ffdf05 inset !important;
+          box-shadow: 0px 0px 0px 2px #ffdf05 inset !important;
+  color: #FFE21F !important;
+}
+.react-chatbot-ui.inverted.yellow.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.yellow.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.yellow.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #f5d500 inset !important;
+          box-shadow: 0px 0px 0px 2px #f5d500 inset !important;
+  color: #FFE21F !important;
+}
+.react-chatbot-ui.inverted.yellow.basic.buttons .active.button,
+.react-chatbot-ui.inverted.yellow.buttons .basic.active.button,
+.react-chatbot-ui.inverted.yellow.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #ffdf05 inset !important;
+          box-shadow: 0px 0px 0px 2px #ffdf05 inset !important;
+  color: #FFE21F !important;
+}
+.react-chatbot-ui.inverted.yellow.basic.buttons .button:active,
+.react-chatbot-ui.inverted.yellow.buttons .basic.button:active,
+.react-chatbot-ui.inverted.yellow.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #ebcd00 inset !important;
+          box-shadow: 0px 0px 0px 2px #ebcd00 inset !important;
+  color: #FFE21F !important;
+}
+
+/*-------------------
+       Primary
+--------------------*/
+
+
+/*--- Standard ---*/
+
+.react-chatbot-ui.primary.buttons .button,
+.react-chatbot-ui.primary.button {
+  background-color: #2185D0;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.primary.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.primary.buttons .button:hover,
+.react-chatbot-ui.primary.button:hover {
+  background-color: #1678c2;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.primary.buttons .button:focus,
+.react-chatbot-ui.primary.button:focus {
+  background-color: #0d71bb;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.primary.buttons .button:active,
+.react-chatbot-ui.primary.button:active {
+  background-color: #1a69a4;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.primary.buttons .active.button,
+.react-chatbot-ui.primary.buttons .active.button:active,
+.react-chatbot-ui.primary.active.button,
+.react-chatbot-ui.primary.button .active.button:active {
+  background-color: #1279c6;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.primary.buttons .button,
+.react-chatbot-ui.basic.primary.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #2185D0 inset !important;
+          box-shadow: 0px 0px 0px 1px #2185D0 inset !important;
+  color: #2185D0 !important;
+}
+.react-chatbot-ui.basic.primary.buttons .button:hover,
+.react-chatbot-ui.basic.primary.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #1678c2 inset !important;
+          box-shadow: 0px 0px 0px 1px #1678c2 inset !important;
+  color: #1678c2 !important;
+}
+.react-chatbot-ui.basic.primary.buttons .button:focus,
+.react-chatbot-ui.basic.primary.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #0d71bb inset !important;
+          box-shadow: 0px 0px 0px 1px #0d71bb inset !important;
+  color: #1678c2 !important;
+}
+.react-chatbot-ui.basic.primary.buttons .active.button,
+.react-chatbot-ui.basic.primary.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #1279c6 inset !important;
+          box-shadow: 0px 0px 0px 1px #1279c6 inset !important;
+  color: #1a69a4 !important;
+}
+.react-chatbot-ui.basic.primary.buttons .button:active,
+.react-chatbot-ui.basic.primary.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #1a69a4 inset !important;
+          box-shadow: 0px 0px 0px 1px #1a69a4 inset !important;
+  color: #1a69a4 !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.primary.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.primary.buttons .button,
+.react-chatbot-ui.inverted.primary.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #54C8FF inset !important;
+          box-shadow: 0px 0px 0px 2px #54C8FF inset !important;
+  color: #54C8FF;
+}
+.react-chatbot-ui.inverted.primary.buttons .button:hover,
+.react-chatbot-ui.inverted.primary.button:hover,
+.react-chatbot-ui.inverted.primary.buttons .button:focus,
+.react-chatbot-ui.inverted.primary.button:focus,
+.react-chatbot-ui.inverted.primary.buttons .button.active,
+.react-chatbot-ui.inverted.primary.button.active,
+.react-chatbot-ui.inverted.primary.buttons .button:active,
+.react-chatbot-ui.inverted.primary.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.inverted.primary.buttons .button:hover,
+.react-chatbot-ui.inverted.primary.button:hover {
+  background-color: #3ac0ff;
+}
+.react-chatbot-ui.inverted.primary.buttons .button:focus,
+.react-chatbot-ui.inverted.primary.button:focus {
+  background-color: #2bbbff;
+}
+.react-chatbot-ui.inverted.primary.buttons .active.button,
+.react-chatbot-ui.inverted.primary.active.button {
+  background-color: #3ac0ff;
+}
+.react-chatbot-ui.inverted.primary.buttons .button:active,
+.react-chatbot-ui.inverted.primary.button:active {
+  background-color: #21b8ff;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.primary.basic.buttons .button,
+.react-chatbot-ui.inverted.primary.buttons .basic.button,
+.react-chatbot-ui.inverted.primary.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.primary.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.primary.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.primary.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #3ac0ff inset !important;
+          box-shadow: 0px 0px 0px 2px #3ac0ff inset !important;
+  color: #54C8FF !important;
+}
+.react-chatbot-ui.inverted.primary.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.primary.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.primary.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #2bbbff inset !important;
+          box-shadow: 0px 0px 0px 2px #2bbbff inset !important;
+  color: #54C8FF !important;
+}
+.react-chatbot-ui.inverted.primary.basic.buttons .active.button,
+.react-chatbot-ui.inverted.primary.buttons .basic.active.button,
+.react-chatbot-ui.inverted.primary.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #3ac0ff inset !important;
+          box-shadow: 0px 0px 0px 2px #3ac0ff inset !important;
+  color: #54C8FF !important;
+}
+.react-chatbot-ui.inverted.primary.basic.buttons .button:active,
+.react-chatbot-ui.inverted.primary.buttons .basic.button:active,
+.react-chatbot-ui.inverted.primary.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #21b8ff inset !important;
+          box-shadow: 0px 0px 0px 2px #21b8ff inset !important;
+  color: #54C8FF !important;
+}
+
+/*-------------------
+      Secondary
+--------------------*/
+
+
+/* Standard */
+.react-chatbot-ui.secondary.buttons .button,
+.react-chatbot-ui.secondary.button {
+  background-color: #1B1C1D;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.secondary.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.secondary.buttons .button:hover,
+.react-chatbot-ui.secondary.button:hover {
+  background-color: #27292a;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.secondary.buttons .button:focus,
+.react-chatbot-ui.secondary.button:focus {
+  background-color: #2e3032;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.secondary.buttons .button:active,
+.react-chatbot-ui.secondary.button:active {
+  background-color: #343637;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.secondary.buttons .active.button,
+.react-chatbot-ui.secondary.buttons .active.button:active,
+.react-chatbot-ui.secondary.active.button,
+.react-chatbot-ui.secondary.button .active.button:active {
+  background-color: #27292a;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.secondary.buttons .button,
+.react-chatbot-ui.basic.secondary.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #1B1C1D inset !important;
+          box-shadow: 0px 0px 0px 1px #1B1C1D inset !important;
+  color: #1B1C1D !important;
+}
+.react-chatbot-ui.basic.secondary.buttons .button:hover,
+.react-chatbot-ui.basic.secondary.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #27292a inset !important;
+          box-shadow: 0px 0px 0px 1px #27292a inset !important;
+  color: #27292a !important;
+}
+.react-chatbot-ui.basic.secondary.buttons .button:focus,
+.react-chatbot-ui.basic.secondary.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #2e3032 inset !important;
+          box-shadow: 0px 0px 0px 1px #2e3032 inset !important;
+  color: #27292a !important;
+}
+.react-chatbot-ui.basic.secondary.buttons .active.button,
+.react-chatbot-ui.basic.secondary.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #27292a inset !important;
+          box-shadow: 0px 0px 0px 1px #27292a inset !important;
+  color: #343637 !important;
+}
+.react-chatbot-ui.basic.secondary.buttons .button:active,
+.react-chatbot-ui.basic.secondary.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #343637 inset !important;
+          box-shadow: 0px 0px 0px 1px #343637 inset !important;
+  color: #343637 !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.primary.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* Inverted */
+.react-chatbot-ui.inverted.secondary.buttons .button,
+.react-chatbot-ui.inverted.secondary.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #545454 inset !important;
+          box-shadow: 0px 0px 0px 2px #545454 inset !important;
+  color: #545454;
+}
+.react-chatbot-ui.inverted.secondary.buttons .button:hover,
+.react-chatbot-ui.inverted.secondary.button:hover,
+.react-chatbot-ui.inverted.secondary.buttons .button:focus,
+.react-chatbot-ui.inverted.secondary.button:focus,
+.react-chatbot-ui.inverted.secondary.buttons .button.active,
+.react-chatbot-ui.inverted.secondary.button.active,
+.react-chatbot-ui.inverted.secondary.buttons .button:active,
+.react-chatbot-ui.inverted.secondary.button:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #FFFFFF;
+}
+.react-chatbot-ui.inverted.secondary.buttons .button:hover,
+.react-chatbot-ui.inverted.secondary.button:hover {
+  background-color: #616161;
+}
+.react-chatbot-ui.inverted.secondary.buttons .button:focus,
+.react-chatbot-ui.inverted.secondary.button:focus {
+  background-color: #686868;
+}
+.react-chatbot-ui.inverted.secondary.buttons .active.button,
+.react-chatbot-ui.inverted.secondary.active.button {
+  background-color: #616161;
+}
+.react-chatbot-ui.inverted.secondary.buttons .button:active,
+.react-chatbot-ui.inverted.secondary.button:active {
+  background-color: #6e6e6e;
+}
+
+/* Inverted Basic */
+.react-chatbot-ui.inverted.secondary.basic.buttons .button,
+.react-chatbot-ui.inverted.secondary.buttons .basic.button,
+.react-chatbot-ui.inverted.secondary.basic.button {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #FFFFFF !important;
+}
+.react-chatbot-ui.inverted.secondary.basic.buttons .button:hover,
+.react-chatbot-ui.inverted.secondary.buttons .basic.button:hover,
+.react-chatbot-ui.inverted.secondary.basic.button:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px #616161 inset !important;
+          box-shadow: 0px 0px 0px 2px #616161 inset !important;
+  color: #545454 !important;
+}
+.react-chatbot-ui.inverted.secondary.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.secondary.basic.buttons .button:focus,
+.react-chatbot-ui.inverted.secondary.basic.button:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #686868 inset !important;
+          box-shadow: 0px 0px 0px 2px #686868 inset !important;
+  color: #545454 !important;
+}
+.react-chatbot-ui.inverted.secondary.basic.buttons .active.button,
+.react-chatbot-ui.inverted.secondary.buttons .basic.active.button,
+.react-chatbot-ui.inverted.secondary.basic.active.button {
+  -webkit-box-shadow: 0px 0px 0px 2px #616161 inset !important;
+          box-shadow: 0px 0px 0px 2px #616161 inset !important;
+  color: #545454 !important;
+}
+.react-chatbot-ui.inverted.secondary.basic.buttons .button:active,
+.react-chatbot-ui.inverted.secondary.buttons .basic.button:active,
+.react-chatbot-ui.inverted.secondary.basic.button:active {
+  -webkit-box-shadow: 0px 0px 0px 2px #6e6e6e inset !important;
+          box-shadow: 0px 0px 0px 2px #6e6e6e inset !important;
+  color: #545454 !important;
+}
+
+/*---------------
+    Positive
+----------------*/
+
+
+/* Standard */
+.react-chatbot-ui.positive.buttons .button,
+.react-chatbot-ui.positive.button {
+  background-color: #21BA45;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.positive.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.positive.buttons .button:hover,
+.react-chatbot-ui.positive.button:hover {
+  background-color: #16ab39;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.positive.buttons .button:focus,
+.react-chatbot-ui.positive.button:focus {
+  background-color: #0ea432;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.positive.buttons .button:active,
+.react-chatbot-ui.positive.button:active {
+  background-color: #198f35;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.positive.buttons .active.button,
+.react-chatbot-ui.positive.buttons .active.button:active,
+.react-chatbot-ui.positive.active.button,
+.react-chatbot-ui.positive.button .active.button:active {
+  background-color: #13ae38;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.positive.buttons .button,
+.react-chatbot-ui.basic.positive.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #21BA45 inset !important;
+          box-shadow: 0px 0px 0px 1px #21BA45 inset !important;
+  color: #21BA45 !important;
+}
+.react-chatbot-ui.basic.positive.buttons .button:hover,
+.react-chatbot-ui.basic.positive.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #16ab39 inset !important;
+          box-shadow: 0px 0px 0px 1px #16ab39 inset !important;
+  color: #16ab39 !important;
+}
+.react-chatbot-ui.basic.positive.buttons .button:focus,
+.react-chatbot-ui.basic.positive.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #0ea432 inset !important;
+          box-shadow: 0px 0px 0px 1px #0ea432 inset !important;
+  color: #16ab39 !important;
+}
+.react-chatbot-ui.basic.positive.buttons .active.button,
+.react-chatbot-ui.basic.positive.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #13ae38 inset !important;
+          box-shadow: 0px 0px 0px 1px #13ae38 inset !important;
+  color: #198f35 !important;
+}
+.react-chatbot-ui.basic.positive.buttons .button:active,
+.react-chatbot-ui.basic.positive.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #198f35 inset !important;
+          box-shadow: 0px 0px 0px 1px #198f35 inset !important;
+  color: #198f35 !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.primary.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/*---------------
+     Negative
+----------------*/
+
+
+/* Standard */
+.react-chatbot-ui.negative.buttons .button,
+.react-chatbot-ui.negative.button {
+  background-color: #DB2828;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+.react-chatbot-ui.negative.button {
+  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.negative.buttons .button:hover,
+.react-chatbot-ui.negative.button:hover {
+  background-color: #d01919;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.negative.buttons .button:focus,
+.react-chatbot-ui.negative.button:focus {
+  background-color: #ca1010;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.negative.buttons .button:active,
+.react-chatbot-ui.negative.button:active {
+  background-color: #b21e1e;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.react-chatbot-ui.negative.buttons .active.button,
+.react-chatbot-ui.negative.buttons .active.button:active,
+.react-chatbot-ui.negative.active.button,
+.react-chatbot-ui.negative.button .active.button:active {
+  background-color: #d41515;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+/* Basic */
+.react-chatbot-ui.basic.negative.buttons .button,
+.react-chatbot-ui.basic.negative.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #DB2828 inset !important;
+          box-shadow: 0px 0px 0px 1px #DB2828 inset !important;
+  color: #DB2828 !important;
+}
+.react-chatbot-ui.basic.negative.buttons .button:hover,
+.react-chatbot-ui.basic.negative.button:hover {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #d01919 inset !important;
+          box-shadow: 0px 0px 0px 1px #d01919 inset !important;
+  color: #d01919 !important;
+}
+.react-chatbot-ui.basic.negative.buttons .button:focus,
+.react-chatbot-ui.basic.negative.button:focus {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #ca1010 inset !important;
+          box-shadow: 0px 0px 0px 1px #ca1010 inset !important;
+  color: #d01919 !important;
+}
+.react-chatbot-ui.basic.negative.buttons .active.button,
+.react-chatbot-ui.basic.negative.active.button {
+  background: transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #d41515 inset !important;
+          box-shadow: 0px 0px 0px 1px #d41515 inset !important;
+  color: #b21e1e !important;
+}
+.react-chatbot-ui.basic.negative.buttons .button:active,
+.react-chatbot-ui.basic.negative.button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #b21e1e inset !important;
+          box-shadow: 0px 0px 0px 1px #b21e1e inset !important;
+  color: #b21e1e !important;
+}
+.react-chatbot-ui.buttons:not(.vertical) > .basic.primary.button:not(:first-child) {
+  margin-left: -1px;
+}
+
+
+/*******************************
+            Groups
+*******************************/
+
+.react-chatbot-ui.buttons {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 0em;
+  vertical-align: baseline;
+  margin: 0em 0.25em 0em 0em;
+}
+.react-chatbot-ui.buttons:not(.basic):not(.inverted) {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* Clearfix */
+.react-chatbot-ui.buttons:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Standard Group */
+.react-chatbot-ui.buttons .button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  margin: 0em;
+  border-radius: 0em;
+  margin: 0px 0px 0px 0px;
+}
+.react-chatbot-ui.buttons > .react-chatbot-ui.button:not(.basic):not(.inverted),
+.react-chatbot-ui.buttons:not(.basic):not(.inverted) > .button {
+  -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+          box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.react-chatbot-ui.buttons .button:first-child {
+  border-left: none;
+  margin-left: 0em;
+  border-top-left-radius: 0.28571429rem;
+  border-bottom-left-radius: 0.28571429rem;
+}
+.react-chatbot-ui.buttons .button:last-child {
+  border-top-right-radius: 0.28571429rem;
+  border-bottom-right-radius: 0.28571429rem;
+}
+
+/* Vertical  Style */
+.react-chatbot-ui.vertical.buttons {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.react-chatbot-ui.vertical.buttons .button {
+  display: block;
+  float: none;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0em;
+}
+.react-chatbot-ui.vertical.buttons .button:first-child {
+  border-top-left-radius: 0.28571429rem;
+  border-top-right-radius: 0.28571429rem;
+}
+.react-chatbot-ui.vertical.buttons .button:last-child {
+  margin-bottom: 0px;
+  border-bottom-left-radius: 0.28571429rem;
+  border-bottom-right-radius: 0.28571429rem;
+}
+.react-chatbot-ui.vertical.buttons .button:only-child {
+  border-radius: 0.28571429rem;
+}
+
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+.react-chatbot-ui.choice-button {
+  background: none;
+  border: 1.4px solid #0270f6;
+  font-family: 'Roboto Regular';
+  font-size: 12px;
+  color: #4F5D64;
+  margin-right: 12px;
+}
+
+.react-chatbot-ui.choice.button:not(.checkbox-submit) {
+  border-radius: 24px;
+}
+
+.react-chatbot-ui.choice-button:hover,
+.react-chatbot-ui.choice-button:active,
+.react-chatbot-ui.choice-button:focus,
+.react-chatbot-ui.choice-button:visited,
+.react-chatbot-ui.choice-button.selected {
+  background: #0270f6;
+  border: 1.5px solid #0270f6;
+  color: #FFFFFF;
+}
+
+.react-chatbot-ui.checkbox-submit {
+  margin-top:8px;
+}
+
+/*******************************
+         Site Overrides
+*******************************/
+
