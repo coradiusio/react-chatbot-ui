@@ -69,6 +69,8 @@ export default class Main extends React.PureComponent {
 
     const noMessageAvailable = messages.length === 0
 
+    console.log('platform :- ', platform)
+
     return (
       <View style={styles.flexView}>
         {

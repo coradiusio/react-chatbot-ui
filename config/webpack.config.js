@@ -362,7 +362,8 @@ module.exports = function(webpackEnv) {
               test: /\.(js|mjs)$/,
               exclude: /@babel(?:\/|\\{1,2})runtime/,
               loader: require.resolve('babel-loader'),
-              options: {
+              options: { babelrcRoots: ['.', '../'] },
+              /*options: {
                 babelrc: false,
                 configFile: false,
                 compact: false,
@@ -380,7 +381,7 @@ module.exports = function(webpackEnv) {
                 // debugger to show the original code. Instead, the code
                 // being evaluated would be much more helpful.
                 sourceMaps: false,
-              },
+              },*/
             },
             // "postcss" loader applies autoprefixer to our CSS.
             // "css" loader resolves paths in CSS and adds assets as dependencies.
