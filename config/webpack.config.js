@@ -286,6 +286,7 @@ module.exports = function(webpackEnv) {
       ],
     },
     module: {
+      noParse: /react-native-modal|react-native-dash|react-native-material-kit|react-native-remote-svg|react-native-swiper/,
       strictExportPresence: true,
       rules: [
         // Disable require.ensure as it's not a standard language feature.
@@ -306,7 +307,8 @@ module.exports = function(webpackEnv) {
               loader: require.resolve('eslint-loader'),
             },
           ],
-          include: paths.appSrc,
+          exclude: /react-native-modal|react-native-dash|react-native-material-kit|react-native-remote-svg|react-native-swiper/,
+          include: paths.appSrc
         },
         {
           // "oneOf" will traverse all following loaders until one will
@@ -334,6 +336,9 @@ module.exports = function(webpackEnv) {
                 customize: require.resolve(
                   'babel-preset-react-app/webpack-overrides'
                 ),
+                presets: [
+                  'react-app'
+                ],
                 
                 plugins: [
                   [
@@ -371,6 +376,12 @@ module.exports = function(webpackEnv) {
                     require.resolve('babel-preset-react-app/dependencies'),
                     { helpers: true },
                   ],
+                  [
+                    'react-app'
+                  ]
+                ],
+                plugins: [
+                  
                 ],
                 cacheDirectory: true,
                 cacheCompression: isEnvProduction,
@@ -381,6 +392,11 @@ module.exports = function(webpackEnv) {
                 // being evaluated would be much more helpful.
                 sourceMaps: false,
               },
+            },
+            {
+              test: /\.ttf$/,
+              loader: "url-loader", // or directly file-loader
+              include: path.resolve(__dirname, "/../node_modules/react-native-vector-icons"),
             },
             // "postcss" loader applies autoprefixer to our CSS.
             // "css" loader resolves paths in CSS and adds assets as dependencies.

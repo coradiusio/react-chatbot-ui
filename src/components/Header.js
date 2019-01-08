@@ -9,11 +9,12 @@ import {
 
 // import Image from 'react-native-remote-svg'
 
-import {
-  Icon,
-  Title,
-  SubTitle
-} from 'reactNativeBasicComponents'
+// import {
+//   Title,
+//   SubTitle
+// } from 'reactNativeBasicComponents'
+
+import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons'
 
 import {
   colors
@@ -40,18 +41,23 @@ class Header extends React.PureComponent {
         style={styles.container}
         elevation={4}
       >
+        <Icon
+          color={'#FFFFFF'}
+          name={'download'}
+          size={47}
+        />
         {
           typeof icon === 'object'
             ? <TouchableOpacity
               onPress={() => {}}
               style={[styles.iconWrapper, styles.leftIconWrapper]}
             >
-              <Icon
+              {/* <Icon
                 color={icon.color}
                 name={icon.name}
                 type={icon.type}
                 size={icon.size}
-              />
+              /> */}
             </TouchableOpacity>
             : <TouchableOpacity
               onPress={() => {}}
@@ -63,7 +69,7 @@ class Header extends React.PureComponent {
               />
             </TouchableOpacity>
         }
-        <View style={styles.middleWrapper}>
+        {/* <View style={styles.middleWrapper}>
           <Title
             text={title}
             style={styles.title}
@@ -76,7 +82,7 @@ class Header extends React.PureComponent {
               style={styles.subtitle}
             />
           </View>
-        </View>
+        </View> */}
         <View style={styles.rightWrapper}>
           <TouchableOpacity
             onPress={() => {}}
