@@ -3,18 +3,22 @@ import React from 'react'
 import {
   StyleSheet,
   View,
+  Text,
   Image,
   TouchableOpacity
 } from 'react-native'
 
 // import Image from 'react-native-remote-svg'
 
-// import {
-//   Title,
-//   SubTitle
-// } from 'reactNativeBasicComponents'
+import { material } from 'react-native-typography'
 
-import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons'
+import {
+  Icon,
+  Title,
+  SubTitle
+} from 'reactNativeBasicComponents'
+
+import FontAwesome from "react-native-vector-icons/dist/FontAwesome"
 
 import {
   colors
@@ -27,6 +31,19 @@ import {
 const backArrowIcon = { uri: `${process.env.PUBLIC_URL}/images/chatbotBackarrow.svg` }
 const searchIcon = { uri: `${process.env.PUBLIC_URL}/images/chatbotSearch.svg` }
 const agentIcon = { uri: `${process.env.PUBLIC_URL}images/chatbotRM.svg` }
+
+const style = document.createElement('style');
+style.type = 'text/css';
+style.appendChild(
+	document.createTextNode(
+		`@font-face {
+			src: url(${require(`react-native-vector-icons/Fonts/FontAwesome.ttf`)});
+			font-family: FontAwesome;
+		}`
+	)
+);
+
+document.head.appendChild(style);
 
 class Header extends React.PureComponent {
   render () {
@@ -43,8 +60,9 @@ class Header extends React.PureComponent {
       >
         <Icon
           color={'#FFFFFF'}
-          name={'download'}
-          size={47}
+          name={'heart'}
+          type={'font-awesome'}
+          size={32}
         />
         {
           typeof icon === 'object'
@@ -69,7 +87,7 @@ class Header extends React.PureComponent {
               />
             </TouchableOpacity>
         }
-        {/* <View style={styles.middleWrapper}>
+        <View style={styles.middleWrapper}>
           <Title
             text={title}
             style={styles.title}
@@ -82,7 +100,7 @@ class Header extends React.PureComponent {
               style={styles.subtitle}
             />
           </View>
-        </View> */}
+        </View>
         <View style={styles.rightWrapper}>
           <TouchableOpacity
             onPress={() => {}}

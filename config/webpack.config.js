@@ -24,7 +24,6 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin-alt');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 
-
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
@@ -395,8 +394,17 @@ module.exports = function(webpackEnv) {
             },
             {
               test: /\.ttf$/,
-              loader: "url-loader", // or directly file-loader
-              include: path.resolve(__dirname, "/../node_modules/react-native-vector-icons"),
+              use: [
+                {
+                  loader: require.resolve('file-loader'),
+                  options: {
+                    name: './fonts/[hash].[ext]',
+                  },
+                },
+              ],
+              include: [
+                path.resolve(__dirname, './../node_modules/react-native-vector-icons'),
+              ],
             },
             // "postcss" loader applies autoprefixer to our CSS.
             // "css" loader resolves paths in CSS and adds assets as dependencies.
